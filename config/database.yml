@@ -31,7 +31,7 @@ development:
   # the same name as the operating system user that initialized the database.
   #username: map_my_rat
 
-  # The password associated with the postgres role (username).
+  # The password associated with the postgres role ().
   #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a

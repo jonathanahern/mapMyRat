@@ -42,19 +42,19 @@ class SignupForm extends React.Component {
 
   render() {
     let days = [];
-    days.push(<option value="0">Day</option>);
+    days.push(<option key="default1" value="0">Day</option>);
     for (var i = 1; i <= 31; i++) {
       days.push(<option key={i.toString() + "day"} value={i} >{i}</option>);
     }
                   
     let monthsStrings = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
     let months = []
-    months.push(<option value="0">Month</option>);
+    months.push(<option key="default3" value="0">Month</option>);
     for (var i = 0; i < monthsStrings.length; i++) {
       months.push(<option key={monthsStrings[i]} value={i+1}>{monthsStrings[i]}</option>);
     }
     let years = []
-    years.push(<option value="0">Year</option>);
+    years.push(<option key="default2" value="0">Year</option>);
     for (var i = 2008; i >= 1900; i--) {
       years.push(
         <option key={i.toString() + "year"} value={i}>{i}</option>

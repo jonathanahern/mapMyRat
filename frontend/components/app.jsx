@@ -1,5 +1,5 @@
 import React from "react";
-import GreetingContainer from "./greeting/greeting_container";
+import NavigationContainer from "./navigation_bar/navigation_container";
 import { Route } from "react-router-dom";
 import LoginFormContainer from "../components/session/login_form_container";
 import SignupFormContainer from "../components/session/signup_form_container";
@@ -12,9 +12,8 @@ axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
 const App = () => (
   <>
     <div>
-      <header>
-        <h1>Map My Rat</h1>
-        <GreetingContainer />
+      <header className="navBar">
+        <NavigationContainer />
       </header>
     </div>
     <AuthRoute exact path="/login" component={LoginFormContainer} />

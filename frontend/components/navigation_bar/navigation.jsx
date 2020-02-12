@@ -11,8 +11,28 @@ const Greeting = ({ user, logout }) => {
 
     const logoutLinks = () => (
         <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
+       {/* "../../../app/assets/images/ratIcon3" */}
+       <div className="logo">
+                <img src="images/ratIcon3.png" alt="" />
+                <div>
+                    <span>M</span><span>A</span><span>P</span><span>M</span><span>Y</span><span>R</span><span>A</span><span>T</span>
+                </div>
+                
+       </div>
+            
+        <div>
+            <Link to="/login">
+                <button className="loginNav" type="button">
+                LOG IN
+                </button>
+            </Link>
+
+            <Link to="/signup">
+                <button className="signupNav" type="button">
+                    SIGN UP
+                </button>
+            </Link>
+        </div>
         </>
     );
 

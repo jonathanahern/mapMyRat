@@ -1,5 +1,97 @@
 .loginModule{
-    // background-color: red;
-    width:1000px;
-    height: 1000px;
+    background-color: #F8F8F8;
+    position:fixed;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
+
+.loginForm{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -180px;
+    width: 320px;
+    padding: 20px;
+}
+
+.loginForm input{
+    background: #E7EFFE;
+    border: solid 1px #D3D6DC;
+    width: 310px;
+    height: 20px;
+    margin: 15px 0;
+    padding: 10px 0 10px 15px;
+}
+
+.loginForm input:last-child, .loginForm input:nth-child(2){
+    padding: 0;
+    background-color: #1ddd7c;
+    border-radius: 2px;
+    width: 325px;
+    height: 40px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Ariel', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+}
+
+.loginForm input:last-child:hover{
+    background-color: #21b66b;
+}
+
+.loginForm input:nth-child(2):hover{
+    background-color: #0b2261;
+}
+
+.signUpLink {
+    color: #9296A3;
+    text-decoration: none;
+    font-family: 'Ariel', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+
+.loginForm input:last-child {
+    background-color: #1ddd7c;
+}
+
+.loginForm input:nth-child(2){
+    background-color: #3B5998;
+}
+
+.orBreak {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orBreak hr {
+    border: .5px solid #C8C7CC;
+    width: 135px;
+}
+
+.orBreak p {
+    color: #9296A3;
+    font-family: 'Muli', sans-serif;
+    font-size: 11px;
+    margin-top: 3px;
+    display: inline-block;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: blue;
+    outline: 0 solid;
+}
+

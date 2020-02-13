@@ -35,9 +35,9 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          Please {this.props.formType}!{this.renderErrors()}
+      <div className="loginModule">
+        {this.renderErrors()}
+        <form className="loginForm" onSubmit={this.handleSubmit}>
           <div>
             <label>
               Email:

@@ -7,9 +7,24 @@
     margin: 0 auto;
 }
 
+button:focus {
+    outline:0;
+}
+
+.logo {
+    position: relative;
+}
+
 .signupNav {
     background-color: #1ddd7c;
     color: white;
+}
+.logo img {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 120px;
+    bottom: -8px;
 }
 
 .loginNav {
@@ -39,7 +54,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     letter-spacing: 4px;
-    margin-bottom: 16px;
     display: inline-block;
  }
 

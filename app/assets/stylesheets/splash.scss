@@ -1,5 +1,5 @@
 #backgroundSplash{
-    background-image: url('rats.jpg');
+    background-image: image-url('rats.jpg');
     width: 100%;
     height: 700px;
     background-repeat: no-repeat;
@@ -55,6 +55,11 @@
     border: none;
 }
 
+.signupSplashButton:hover {
+    background-color: #21b66b;
+}
+
+
 .contentSplash div {
     display:flex;
     justify-content: right;
@@ -73,6 +78,10 @@
     font-weight: 400;
     font-family: 'Arial', sans-serif;
     color: white;
+}
+
+.loginSplashButton:hover {
+    background-color: rgba(177, 177, 177, 0.46);
 }
 
 .contentSplash div span {

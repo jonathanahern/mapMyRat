@@ -21,7 +21,6 @@ export const receiveErrors = errors => {
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors: errors.responseJSON
-  };
 };
 
 export const login = user => dispatch =>

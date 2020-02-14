@@ -25,7 +25,7 @@ class User < ApplicationRecord
   validates :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
-  after_initialize :ensure_session_token, :generate_birthday
+  after_initialize :ensure_session_token, :generate_birthday, :generate_profile_pic
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
@@ -35,6 +35,11 @@ class User < ApplicationRecord
 
   def generate_birthday
     self.birthday = Date.new(year.to_i, month.to_i, day.to_i) unless day.nil?
+  end
+
+  def generate_profile_pic
+    # generic = "https://lh3.googleusercontent.com/proxy/jdZ3k23GwKs1-ngvbf-lWWGa06fj1DwdCPs8cf4H5IitV90KesCpRzN9XlNvQ_uVCrvG3rmNLgbMx9489tLHOAO1zkyYEf_xsOmjzWEtyc3S67WxEOHrecTzhRY7ATg7VuRdhi8QCEOoYQAfcQKk9bHtZadM1wQWQsv5r8qlYAkEzewkq01zFp75IPEMqVAJU4M7"
+    # self.img_url = window.userIconURL unless self.img_url
   end
 
   def password=(password)

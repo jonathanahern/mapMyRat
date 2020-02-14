@@ -1,4 +1,4 @@
-.loginModule{
+.loginModule, .signupModule{
     background-color: #F8F8F8;
     position:fixed;
     top: 65px;
@@ -6,9 +6,10 @@
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: scroll;
 }
 
-.loginForm{
+.loginForm, .signupForm{
     position: absolute;
     top: 100px;
     left: 50%;
@@ -17,20 +18,30 @@
     padding: 20px;
 }
 
-.loginForm input{
-    background: #E7EFFE;
+.loginForm input, .signupForm input{
+    background: #F8F8F8;
     border: solid 1px #D3D6DC;
-    width: 310px;
+    width: 300px;
     height: 20px;
-    margin: 15px 0;
+    margin: 12px 0;
     padding: 10px 0 10px 15px;
+    font-size: 12px;
+    // color: #9296A3;
+}
+::placeholder { 
+  color: #9296A3;
+  font-size: 14px;
 }
 
-.loginForm input:last-child, .loginForm input:nth-child(2){
+.whiteInput {
+    background: #F8F8F8;
+}
+
+.loginForm input:last-child, .loginForm input:nth-child(2), #signupDemo, #signupButton{
     padding: 0;
     background-color: #1ddd7c;
     border-radius: 2px;
-    width: 325px;
+    width: 315px;
     height: 40px;
     display: inline-block;
     font-size: 13px;
@@ -41,21 +52,25 @@
     border: none;
 }
 
-.loginForm input:last-child:hover{
+.loginForm input:last-child:hover, #signupButton:hover{
     background-color: #21b66b;
 }
 
-.loginForm input:nth-child(2):hover{
+.loginForm input:nth-child(2):hover, #signupDemo:hover{
     background-color: #0b2261;
 }
 
-.signUpLink {
+#signupButton{
+    margin-top: 40px;
+}
+
+.signUpLink, .loginLink {
     color: #9296A3;
     text-decoration: none;
     font-family: 'Ariel', sans-serif;
     font-size: 12px;
     position: absolute;
-    right: 16px;
+    right: 26px;
     top: 8px;
 }
 
@@ -63,7 +78,7 @@
     background-color: #1ddd7c;
 }
 
-.loginForm input:nth-child(2){
+.loginForm input:nth-child(2), #signupDemo{
     background-color: #3B5998;
 }
 
@@ -85,13 +100,162 @@
     display: inline-block;
 }
 
+#orBreakSignup {
+    display: flex;
+    justify-content: space-between;
+}
+
+#orBreakSignup hr {
+    border: .5px solid #C8C7CC;
+    width: 135px;
+    height: 0px;
+}
+
+#orBreakSignup p {
+    color: #9296A3;
+    font-family: 'Muli', sans-serif;
+    font-size: 11px;
+    margin-top: -2px;
+    display: inline-block;
+}
+
+.birthdaySelect select, #countryDropdown{
+  margin-top: 12px;
+  appearance: none;
+  color: #9296A3;
+  font-size: 14px;
+  height: 42px;
+  border-radius: 0px;
+  border: solid 1px #D3D6DC;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding-left: 15px;
+}
+
+#countryDropdown{
+    margin: 0;
+    width: 315px;
+    position: relative;
+    bottom: 32px;
+}
+
+.selectArrow {
+    position: absolute;
+    color: #D3D6DC;
+    font-family: 'Lora', serif;
+    transform: rotate(-180deg);
+}
+
+#arrowDay {
+    bottom: 325px;
+    right: 275px;
+}
+
+#arrowMonth {
+    bottom: 325px;
+    right: 145px;
+}
+
+#arrowYear {
+    bottom: 325px;
+    right: 35px;
+}
+
+#arrowCountry {
+    bottom: 200px;
+    right: 35px;
+}
+
+.birthdaySelect select:nth-child(1) {
+  width: 80px;
+  margin-right: 14px;
+}
+
+.birthdaySelect select:nth-child(3) {
+  width: 118px;
+  margin-right: 14px;
+}
+
+.birthdaySelect select:nth-child(5) {
+  width: 92px;
+}
+
+.signup input[type="submit"]:hover{
+    cursor: pointer;
+}
+
 input[type="submit"]:hover{
     cursor: pointer;
 }
 
-
-textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
-    border-color: blue;
-    outline: 0 solid;
+.genderRadio {
+    position: relative;
 }
 
+.genderContainer {
+    display: flex;
+    margin: 24px 0;
+}
+
+.signupForm input[type="radio"]{
+    display:none;
+}
+
+.signupForm input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background-color: transparent;
+    width: 97px;
+    height: 40px;
+    cursor:pointer;
+}
+
+.radioSpan {
+    border: solid #D3D6DC 1px;
+}
+
+.signupForm input[type="radio"]:checked + label span {
+    background:url(ratIcon.png) -19px top no-repeat;
+}
+
+.signupForm input[type="radio"]:checked + label + label {
+    color: #212528;
+}
+.signupForm input[type="radio"]:checked + label + label #oDiv  {
+    color: #1DDD7C;
+    // font-size: 18px;
+}
+
+.genderRadio label:last-child{
+    position:relative;
+    bottom: 30px;
+    left: 15px;
+    color: #9296A3;
+    pointer-events: none;
+    font-family: 'Ariel', sans-serif;
+    font-size: 14px;
+}
+
+#oDiv{
+    position: relative;
+    left: 60px;
+    bottom: 13px;
+    color: #9296A3;
+}
+
+.signupForm p {
+    text-align: center;
+    font-family: 'Ariel', sans-serif;
+    font-size: 14px;
+    color: #9296A3;
+    line-height: 20px;
+}
+
+
+extarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    // color: blue;
+    outline: 0 solid;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "react-dropdown";
+import { Link } from "react-router-dom";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -15,12 +16,19 @@ class SignupForm extends React.Component {
       country: "United States"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.passItThrough(user);
+  }
+
+  handleDemoUser(e) {
+    e.preventDefault();
+    const user = { email: "demo@email.com", password: "password" };
+    this.props.loginDemo(user);
   }
 
   update(field) {
@@ -67,14 +75,30 @@ class SignupForm extends React.Component {
     ];
 
     return (
-      <div>
+      <div className="signupModule">
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
-          <ul>
+          <ul className="signupForm">
+            <li>
+              <input id="signupDemo" type="submit" onClick={this.handleDemoUser} value="SIGN UP AS DEMO USER" />
+            </li>
+
+            <li>
+              <Link className="loginLink" to="/login">LOG IN</Link>
+            </li>
+            <li>
+              <div id="orBreakSignup">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+            </li>
+
             <li key="firstname1">
               <label>
                 <input
-                  placeholder="First Name"
+                  className="whiteInput"
+                  placeholder="First name"
                   type="text"
                   value={this.state.first_name}
                   onChange={this.update("first_name")}
@@ -84,7 +108,8 @@ class SignupForm extends React.Component {
             <li key="lastname2">
               <label>
                 <input
-                  placeholder="Last Name"
+                  className="whiteInput"
+                  placeholder="Last name"
                   type="text"
                   value={this.state.last_name}
                   onChange={this.update("last_name")}
@@ -111,7 +136,7 @@ class SignupForm extends React.Component {
                 />
               </label>
             </li>
-            <li key="date5">
+            <li key="date5" className="birthdaySelect">
               <select
                 id="dayDropdown"
                 value={this.state.day}
@@ -119,6 +144,7 @@ class SignupForm extends React.Component {
               >
                 {days}
               </select>
+              <span className="selectArrow" id="arrowDay">^</span>
               <select
                 id="monthDropdown"
                 value={this.state.month}
@@ -126,6 +152,7 @@ class SignupForm extends React.Component {
               >
                 {months}
               </select>
+              <span className="selectArrow" id="arrowMonth">^</span>
               <select
                 id="yearDropdown"
                 value={this.state.year}
@@ -133,42 +160,44 @@ class SignupForm extends React.Component {
               >
                 {years}
               </select>
+              <span className="selectArrow" id="arrowYear">^</span>
             </li>
-            <li key="gender6">
+            <li className="genderContainer" key="gender6">
               <div className="genderRadio">
-                <label>
                   <input
+                    id="optionM"
                     type="radio"
                     value="M"
                     checked={this.state.gender === "M"}
                     onChange={this.update("gender")}
                   />
-                  Male
-                </label>
+                <label htmlFor="optionM"><span className="radioSpan"></span></label>
+                <label>Male<div id="oDiv">✓</div></label>
               </div>
-
+              
               <div className="genderRadio">
-                <label>
                   <input
+                  id="optionF"
                     type="radio"
                     value="F"
                     checked={this.state.gender === "F"}
                     onChange={this.update("gender")}
                   />
-                  Female
-                </label>
+                <label htmlFor="optionF"><span className="radioSpan"></span></label>
+                <label>Female<div id="oDiv">✓</div></label>
               </div>
 
               <div className="genderRadio">
-                <label>
+                
                   <input
+                  id="optionO"
                     type="radio"
                     value="O"
                     checked={this.state.gender === "O"}
                     onChange={this.update("gender")}
                   />
-                  Other
-                </label>
+                <label htmlFor="optionO"><span className="radioSpan"></span></label>
+                <label>Other<div id="oDiv">✓</div></label>
               </div>
             </li>
             <li key="country7">
@@ -178,8 +207,12 @@ class SignupForm extends React.Component {
                 onChange={this.update("country")}
               >{countries}
               </select>
+              <span className="selectArrow" id="arrowCountry">^</span>
             </li>
-            <input type="submit" value="SIGN UP" />
+            <li>
+              <p>By signing up with MapMyRat, you agree to nothing important & rats are not that bad.</p>
+            </li>
+            <input id="signupButton" type="submit" value="SIGN UP" />
           </ul>
         </form>
       </div>

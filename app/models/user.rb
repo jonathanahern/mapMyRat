@@ -27,6 +27,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token, :generate_birthday, :generate_profile_pic
 
+  has_many :tours,
+    class_name: :Tour,
+    primary_key: :id,
+    foreign_key: :tour_id
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user

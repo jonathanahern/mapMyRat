@@ -4,6 +4,7 @@
     <title>MapMyRat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
    <link href="https://fonts.googleapis.com/css?family=Muli|Roboto:900&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">

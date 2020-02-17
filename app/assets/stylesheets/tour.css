@@ -1,0 +1,20 @@
+#create-container {
+    height: 91%;
+    background-color: aquamarine;
+    display:flex;
+}
+
+#create-sidebar{
+    padding: 20px;
+    border-right: solid #999999 1px;
+    min-width: 300px;
+    height: 100%;
+    background-color: gray;
+    box-sizing: border-box;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+}
+

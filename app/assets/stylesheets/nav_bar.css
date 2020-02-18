@@ -21,6 +21,7 @@ button:focus {
 
 .logo {
     position: relative;
+    margin-top: 1px;
 }
 
 .signupNav {
@@ -104,6 +105,27 @@ button:focus {
 #userProfile:hover + .profileMenu, .profileMenu:hover {
     display: block;
     cursor: pointer;
+}
+
+#navLink  {
+    color: #9297a3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#navLink:hover {
+    color: #666666;
+    cursor: pointer;
+}
+
+.navBarLeft > div{
+    margin: 0 20px;
+}
+.navBarLeft{
+    display: flex;
+    justify-content: space-between;
 }
 
 .profileMenu li:last-child{

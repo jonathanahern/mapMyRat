@@ -5,3 +5,4 @@ export const createTour = tour => {
         data: { tour }
     });
 };
+

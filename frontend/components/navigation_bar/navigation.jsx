@@ -13,14 +13,26 @@ const Greeting = ({ user, logout }) => {
     }
     const userGreeting = () => (
         <>
-            <div className="logo">
-                
-                <img src={window.ratIconURL} />
+            <div className="navBarLeft">
                 <div>
-                    <span>M</span><span>A</span><span>P</span><span>M</span><span>Y</span><span>R</span><span>A</span><span>T</span>
-                </div>
+                <Link to="/">
+                    <div className="logo">
+                        
+                        <img src={window.ratIconURL} />
+                        <div>
+                            <span>M</span><span>A</span><span>P</span><span>M</span><span>Y</span><span>R</span><span>A</span><span>T</span>
+                        </div>
 
+                    </div>
+                </Link>
+                </div>
+                <div>
+                    <Link to="/tours/create" id="navLink">
+                        CREATE TOUR
+                    </Link>
+                </div>
             </div>
+
 
             <div id="profile">
                 {profileImg}
@@ -36,14 +48,14 @@ const Greeting = ({ user, logout }) => {
     const logoutLinks = () => (
         <>
             <Link to="/">
-        <div className="logo">
-                <img src={window.ratIconURL} />
-                <div>
-                    <span>M</span><span>A</span><span>P</span><span>M</span><span>Y</span><span>R</span><span>A</span><span>T</span>
+                <div className="logo">
+                        <img src={window.ratIconURL} />
+                        <div>
+                            <span>M</span><span>A</span><span>P</span><span>M</span><span>Y</span><span>R</span><span>A</span><span>T</span>
+                        </div>
+                            
                 </div>
-                    
-        </div>
-        </Link>
+            </Link>
             
         <div>
             <Link to="/login">

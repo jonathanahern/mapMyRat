@@ -47,6 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-html,body,#root, #root > div {
-	width: 100%;
+body, #root, html{
+	height: 100%;
 }

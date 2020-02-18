@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Rodent.delete_all
+Tour.delete_all
 User.delete_all
 
 u1 = User.create!(
@@ -17,4 +19,31 @@ u1 = User.create!(
     gender: "M",
     birthday: Date.new(1990, 3, 30),
     country: "United States"
+)
+
+t1 = Tour.create!(
+    user_id: u1.id,
+    name: 'Park Slope Tour',
+    distance: 1.3
+)
+
+r1 = Rodent.create!(
+    tour_id: t1.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'Racoon'
+)
+
+r2 = Rodent.create!(
+    tour_id: t1.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'Rat'
+)
+
+r3 = Rodent.create!(
+    tour_id: t1.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'Squirrel'
 )

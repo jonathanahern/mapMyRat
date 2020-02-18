@@ -18,9 +18,16 @@ class TourMap extends React.Component {
         };
 
         this.markersArray = [];
+        this.coordsArray = [];
         this.startMarker = null;
         this.map = null;
         this.geocoder = new google.maps.Geocoder();
+        this.currentRodent = "rat";
+        this.selectedIconElement = null;
+        this.selectedIconImage = null;
+        this.directionsRendererTemp = null;
+        this.directionsDisplay = null;
+        this.dancing = false;
 
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,11 +37,22 @@ class TourMap extends React.Component {
         this.codeAddress = this.codeAddress.bind(this);
         this.geocoder.geocode = this.geocoder.geocode.bind(this);
         this.callback = this.callback.bind(this);
+        this.handleRodent = this.handleRodent.bind(this);
+        this.placeMarkerRoute = this.placeMarkerRoute.bind(this);
+        this.toolUndo = this.toolUndo.bind(this);
+        this.toolClear = this.toolClear.bind(this);
+        this.toolReturn = this.toolReturn.bind(this);
+        this.toolDance = this.toolDance.bind(this);
         
     }
 
     componentDidMount() {
         this.getLocation();
+        this.selectedIconElement = document.getElementById("selectedIcon");
+        this.directionsDisplay = new google.maps.DirectionsRenderer({ suppressMarkers: true, preserveViewport: true });
+        if (this.selectedIconImage === null){
+            this.selectedIconImage = window.ratMarkerURL;
+        }
     }
 
     getLocation() {
@@ -99,7 +117,6 @@ class TourMap extends React.Component {
                 zoom: this.zoom
             };
             let myLatLng = new google.maps.LatLng({ lat: this.center['lat'], lng: this.center['lng'] });
-            debugger
             this.map.panTo(myLatLng);
             // this.map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
         } else {
@@ -125,46 +142,144 @@ class TourMap extends React.Component {
     }
 
     handleClick(coords) {
-        console.log(coords)
-        this.markersArray.push(coords);
-         if (this.markersArray.length > 1){
-             if (this.startMarker !== null){
-                 this.startMarker.setMap(null);
-            }
+        this.coordsArray.push(coords);
+        let image = {
+            url: this.selectedIconImage,
+            anchor: new google.maps.Point(16, 26),
+            scaledSize: new google.maps.Size(40, 40)
+        };
+        this.startMarker = new google.maps.Marker({ position: coords, map: this.map, icon: image, animation: google.maps.Animation.DROP });
+        this.markersArray.push(this.startMarker);
+        this.startMarker.setMap(this.map);
+        if (this.dancing) {
+            this.startMarker.setAnimation(google.maps.Animation.BOUNCE)
+        }
+        if (this.markersArray.length > 1) {
             this.calculateAndDisplayRoute();
-         } else {
-            this.startMarker = new google.maps.Marker({ position: coords, map: this.map });
-            this.startMarker.setMap(this.map);
-         };
+        }  
+    }
+
+    handleRodent(e) {
+        e.preventDefault();
+        this.selectedIconElement.className = 'rodentIcons';
+        this.selectedIconElement = e.currentTarget;
+        e.currentTarget.className = 'rodentIcons selectedIcon';
+        let val = e.currentTarget.attributes.value.value;
+        if (val === "rat") {
+            this.selectedIconImage = window.ratMarkerURL;
+        } else if (val === "rabbit") {
+            this.selectedIconImage = window.rabbitMarkerURL;
+        } else if (val === "mouse") {
+            this.selectedIconImage = window.mouseMarkerURL;
+        } else if (val === "squirrel") {
+            this.selectedIconImage = window.squirrelMarkerURL;
+        } else if (val === "raccoon") {
+            this.selectedIconImage = window.raccoonMarkerURL;
+        } else if (val === "other") {
+            this.selectedIconImage = window.otherMarkerURL;
+        }
+
     }
 
     calculateAndDisplayRoute() {
-        const wayPoints = this.markersArray.slice(1, this.markersArray.length - 1).map(locale => ({
+
+        const wayPoints = this.coordsArray.slice(1, this.coordsArray.length - 1).map(locale => ({
             location: locale
         }));
 
         const directionsRequestParams = {
-            origin: this.markersArray[0],
-            destination: this.markersArray[this.markersArray.length-1],
+            origin: this.coordsArray[0],
+            destination: this.coordsArray[this.coordsArray.length-1],
             waypoints: wayPoints,
             travelMode: 'WALKING',
             unitSystem: google.maps.UnitSystem.IMPERIAL
         }
  
         var directionsService = new google.maps.DirectionsService();
-        var directionsRenderer = new google.maps.DirectionsRenderer();
+        // var directionsRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
+        this.directionsDisplay.setMap(this.map);
+        this.directionsRendererTemp = this.directionsDisplay;
+        directionsService.route(directionsRequestParams, this.placeMarkerRoute);
+    }
 
-        directionsRenderer.setMap(this.map);
-        directionsService.route(directionsRequestParams, function (result, status) {
-            if (status == 'OK') {
-                directionsRenderer.setDirections(result);
+
+    placeMarkerRoute(result, status){
+        if (status == 'OK') {
+            this.directionsRendererTemp.setDirections(result);
+        }
+    }
+
+    toolUndo(e){
+        e.preventDefault();
+        if (this.coordsArray.length < 1){
+            return null;
+        }
+        this.coordsArray.pop();
+        let badMarker = this.markersArray.pop();
+        badMarker.setMap(null);
+        this.directionsDisplay.setMap(null);
+        this.calculateAndDisplayRoute();
+
+    }
+
+    toolClear(e){
+        e.preventDefault();
+        this.coordsArray = [];
+        for (let i = 0; i < this.markersArray.length; i++) {
+            const badMarker = this.markersArray[i];
+            badMarker.setMap(null);
+        }
+        this.markersArray = [];
+        this.directionsDisplay.setMap(null);
+        this.directionsDisplay = new google.maps.DirectionsRenderer({ suppressMarkers: true, preserveViewport: true });
+
+    }
+
+    toolReturn(e){
+        e.preventDefault();
+        if (this.markersArray.length < 2) {
+            return null;
+        }  
+        let firstCoord = this.coordsArray[0];
+        this.coordsArray.push(firstCoord);
+        let image = {
+            url: this.selectedIconImage,
+            anchor: new google.maps.Point(16, 26),
+            scaledSize: new google.maps.Size(40, 40)
+        };
+        this.startMarker = new google.maps.Marker({ position: firstCoord, map: this.map, icon: image });
+
+        this.markersArray.push(this.startMarker);
+        this.startMarker.setMap(this.map);
+        if (this.dancing) {
+            this.startMarker.setAnimation(google.maps.Animation.BOUNCE)
+        }
+        this.calculateAndDisplayRoute();
+    }
+
+    toolDance(e){
+        e.preventDefault();
+        if (this.dancing) {
+            this.dancing = false;
+
+            for (let i = 0; i < this.markersArray.length; i++) {
+                const marker = this.markersArray[i];
+                marker.setAnimation(null)
             }
-        });
+        } else {
+
+            this.dancing = true;
+            for (let i = 0; i < this.markersArray.length; i++) {
+                const marker = this.markersArray[i];
+                marker.setAnimation(google.maps.Animation.BOUNCE)
+            }
+        }
     }
 
     render() {
         
         return (
+            <>
             <div id="create-container">
                 <div id="create-sidebar">
                     <div className="map-location">
@@ -188,10 +303,32 @@ class TourMap extends React.Component {
                         </ul>
                     </form>
                 </div>
-                <div id='map-container' className={this.state.class}>
-                </div>
+                    <div id='map-container' className={this.state.class}>
+                            
+                    </div>
+                    <div className="mapTools">
+
+                        <ul className="toolButtonHolder">
+                            <li><button onClick={this.toolUndo}><img src={window.undoURL} alt="Sourced from Flaticon.com" />UNDO</button></li>
+                            <li><button onClick={this.toolClear}><img src={window.clearURL} alt="Sourced from Flaticon.com" />CLEAR</button></li>
+                            <li><button onClick={this.toolReturn}><img src={window.returnURL} alt="Sourced from Flaticon.com" />RETURN</button></li>
+                            <li><button onClick={this.toolDance}><img src={window.danceURL} alt="Sourced from Flaticon.com" />DANCE</button></li>
+                        </ul>
+
+                        <h3>SELECT RODENT</h3>
+                        <ul>
+                            <li><img id="selectedIcon" className="rodentIcons selectedIcon" value="rat" src={window.ratMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                            <li><img className="rodentIcons" value="rabbit" src={window.rabbitMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                            <li><img className="rodentIcons" value="squirrel" src={window.squirrelMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                            <li><img className="rodentIcons" value="mouse" src={window.mouseMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                            <li><img className="rodentIcons" value="raccoon" src={window.raccoonMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                            <li><img className="rodentIcons" value="other" src={window.otherMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
+                        </ul>
+                    </div>
 
             </div>
+           
+            </>
         );
     }
 }

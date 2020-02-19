@@ -95,7 +95,7 @@
 }
 
 .mapTools{
-    height: 220px;
+    height: 235px;
     width: 170px;
     background-color: white;
     z-index: 101;
@@ -110,6 +110,8 @@
     justify-content: flex-start;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
 }
+
+
 
 .mapTools ul{
     /* background-color: red; */
@@ -147,6 +149,14 @@
     font-weight: 700;
 }
 
+.mapTools h5 {
+    text-align: center;
+    margin-top: 3px;
+    font-size: 9px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
 .toolButtonHolder button{
     background-color: #D3D6DC;
     border-radius: 4px;
@@ -180,4 +190,43 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.dance {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+  background-color: yellow;
+  border: 5px solid yellow;
+}
+
+marquee{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    
+}
+
+marquee img{
+    height: 220px
+}
+
+.show {
+    opacity: 1.0;
+}
+
+
+@keyframes shake {
+  0% { background-color: red; border: 5px solid red;}
+  10% { color: red; }
+  20% { background-color: purple; border: 5px solid purple;}
+  30% { color: purple;}
+  40% { background-color: yellowgreen; border: 5px solid yellowgreen;}
+  50% { color: yellowgreen;}
+  60% { background-color: yellow; border: 5px solid yellow;}
+  70% { color: yellow;}
+  80% { background-color: orange; border: 5px solid orange;}
+  90% {  color: orange;}
+  100% { background-color: blue; border: 5px solid blue;}
 }

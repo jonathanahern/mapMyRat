@@ -14,7 +14,8 @@ class TourMap extends React.Component {
         this.state = {
             name: "",
             description: "",
-            class: "loading"
+            class: "loading",
+            currentRodent: "RAT"
         };
 
         this.markersArray = [];
@@ -135,13 +136,15 @@ class TourMap extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const tour = Object.assign({}, this.state);
+        const rodents = {rodents: this.coordsArray}
+        const tour = Object.assign({}, this.state, rodents);
         if (this.markersArray.length > 1){
             this.props.createTour(tour);
         }
     }
 
     handleClick(coords) {
+        coords["species"] = this.currentRodent.toLowerCase();
         this.coordsArray.push(coords);
         let image = {
             url: this.selectedIconImage,
@@ -165,6 +168,8 @@ class TourMap extends React.Component {
         this.selectedIconElement = e.currentTarget;
         e.currentTarget.className = 'rodentIcons selectedIcon';
         let val = e.currentTarget.attributes.value.value;
+        this.setState({ currentRodent: val.toUpperCase() })
+        this.currentRodent = val;
         if (val === "rat") {
             this.selectedIconImage = window.ratMarkerURL;
         } else if (val === "rabbit") {
@@ -186,10 +191,12 @@ class TourMap extends React.Component {
         const wayPoints = this.coordsArray.slice(1, this.coordsArray.length - 1).map(locale => ({
             location: locale
         }));
-
+        debugger
+        const newOrigin = { lat: this.coordsArray[0]["lat"], lng: this.coordsArray[0]["lng"]};
+        const newDest = { lat: this.coordsArray[this.coordsArray.length - 1]["lat"], lng: this.coordsArray[this.coordsArray.length - 1]["lng"] };
         const directionsRequestParams = {
-            origin: this.coordsArray[0],
-            destination: this.coordsArray[this.coordsArray.length-1],
+            origin: newOrigin,
+            destination: newDest,
             waypoints: wayPoints,
             travelMode: 'WALKING',
             unitSystem: google.maps.UnitSystem.IMPERIAL
@@ -241,6 +248,7 @@ class TourMap extends React.Component {
             return null;
         }  
         let firstCoord = this.coordsArray[0];
+        firstCoord.push(this.currentRodent.toLowerCase());
         this.coordsArray.push(firstCoord);
         let image = {
             url: this.selectedIconImage,
@@ -266,7 +274,17 @@ class TourMap extends React.Component {
                 const marker = this.markersArray[i];
                 marker.setAnimation(null)
             }
+
+            document.getElementById("mapToolsId").className ="mapTools"
+            document.getElementById("map-container").className = "map"
+            document.getElementById("cool-possum").className = ""
+
+
         } else {
+
+            document.getElementById("mapToolsId").className = "mapTools dance"
+            document.getElementById("map-container").className = "map dance"
+            document.getElementById("cool-possum").className = "show"
 
             this.dancing = true;
             for (let i = 0; i < this.markersArray.length; i++) {
@@ -306,7 +324,7 @@ class TourMap extends React.Component {
                     <div id='map-container' className={this.state.class}>
                             
                     </div>
-                    <div className="mapTools">
+                    <div id="mapToolsId" className="mapTools">
 
                         <ul className="toolButtonHolder">
                             <li><button onClick={this.toolUndo}><img src={window.undoURL} alt="Sourced from Flaticon.com" />UNDO</button></li>
@@ -316,6 +334,7 @@ class TourMap extends React.Component {
                         </ul>
 
                         <h3>SELECT RODENT</h3>
+                        <h5>{this.state.currentRodent}</h5>
                         <ul>
                             <li><img id="selectedIcon" className="rodentIcons selectedIcon" value="rat" src={window.ratMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
                             <li><img className="rodentIcons" value="rabbit" src={window.rabbitMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
@@ -325,9 +344,9 @@ class TourMap extends React.Component {
                             <li><img className="rodentIcons" value="other" src={window.otherMarkerURL} alt="Sourced from Flaticon.com" onClick={this.handleRodent}/></li>
                         </ul>
                     </div>
-
+                
             </div>
-           
+                <marquee id="cool-possum" behavior="" direction=""><img src={window.coolPossumURL} alt="" /></marquee>
             </>
         );
     }

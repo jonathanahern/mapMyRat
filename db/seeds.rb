@@ -24,26 +24,30 @@ u1 = User.create!(
 t1 = Tour.create!(
     user_id: u1.id,
     name: 'Park Slope Tour',
-    distance: 1.3
+    distance: 1.3,
+    description: "so fun"
 )
 
 r1 = Rodent.create!(
     tour_id: t1.id,
     lat: 40.676138,
     lng: 73.978784,
-    species: 'Racoon'
+    species: 'raccoon',
+    ord: 0
 )
 
 r2 = Rodent.create!(
     tour_id: t1.id,
     lat: 40.669207,
     lng: 73.986288,
-    species: 'Rat'
+    species: 'rat',
+    ord: 1
 )
 
 r3 = Rodent.create!(
     tour_id: t1.id,
     lat: 40.672695,
     lng: 73.970614,
-    species: 'Squirrel'
+    species: 'squirrel',
+    ord: 2
 )

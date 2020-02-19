@@ -66,3 +66,17 @@
     flex-grow: 1;
     border: .5px solid rgb(205,205,205);
 }
+
+#tour-details-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tour-details-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ariel', sans-serif;
+    font-weight: 100;
+}

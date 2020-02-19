@@ -10,9 +10,9 @@ const TourIndexItem = props => {
             <p>{props.tour.description}</p>
         </div>
         <div id="tour-details-container">
-            <div><span>Rodent Count</span></div>
-            <div><span>Distance</span></div>
-            <div><span>Map Image</span></div>
+            <div id="rodent-count"><span>Rodent Count</span></div>
+            <div id="distance"><span>Distance</span></div>
+            <div id="map-image"><span>Map Image</span></div>
         </div>
     </li>
     

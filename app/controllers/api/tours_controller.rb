@@ -1,7 +1,8 @@
 class Api::ToursController < ApplicationController
 
   def index
-    @tours = Tour.all
+    tours = Tour.all
+    @tours = tours.includes(:rodents)
     render :index
   end
 

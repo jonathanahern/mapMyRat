@@ -27262,3 +27262,755 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 960ms (Views: 956.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2020-02-18 21:51:31 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathanahern/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (40.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (89.6ms)
+Completed 200 OK in 3340ms (Views: 3283.1ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:52:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:52:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:58:01 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathanahern/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 1475ms (Views: 1462.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:58:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 93ms (Views: 88.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:59:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 21:59:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 128ms (Views: 123.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:00:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:01:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 564ms (Views: 559.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:02:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 77ms (Views: 72.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:04:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 608ms (Views: 605.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:05:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 325ms (Views: 321.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:06:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 121ms (Views: 115.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:08:11 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 99ms (Views: 96.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:13:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 522ms (Views: 515.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:16:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 550ms (Views: 542.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:18:41 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 123ms (Views: 119.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:19:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 116ms (Views: 112.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:19:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 86ms (Views: 81.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:23:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 124ms (Views: 121.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:40:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (129.5ms)
+Completed 200 OK in 768ms (Views: 704.0ms | ActiveRecord: 61.0ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 22:41:12 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"taco town", "description"=>"tacos so much", "class"=>"map", "currentRodent"=>"RAT", "rodents"=>{"0"=>{"lat"=>"40.67738517007139", "lng"=>"-73.98301709709776"}, "1"=>{"lat"=>"40.68122556288108", "lng"=>"-73.9803778034271"}, "2"=>{"lat"=>"40.68021666755322", "lng"=>"-73.97769559441221"}, "3"=>{"lat"=>"40.676571499124336", "lng"=>"-73.98044217644346"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+No template found for Api::ToursController#create, rendering head :no_content
+Completed 204 No Content in 177138ms (ActiveRecord: 41.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:47:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 105ms (Views: 94.1ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 22:48:09 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"test", "description"=>"taco", "class"=>"map", "currentRodent"=>"RAT", "rodents"=>{"0"=>{"lat"=>"40.68026938524065", "lng"=>"-73.98413429604797"}, "1"=>{"lat"=>"40.67969984126279", "lng"=>"-73.97816906319885"}, "2"=>{"lat"=>"40.67729143007632", "lng"=>"-73.97651682244567"}, "3"=>{"lat"=>"40.67558270721473", "lng"=>"-73.98085127221374"}, "4"=>{"lat"=>"40.67750298319333", "lng"=>"-73.98310432778625"}}}}
+Unpermitted parameters: :name, :description, :class, :currentRodent, :rodents
+Unpermitted parameters: :class, :currentRodent, :rodents
+Unpermitted parameters: :name, :description, :class, :currentRodent, :rodents
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+No template found for Api::ToursController#create, rendering head :no_content
+Completed 204 No Content in 200082ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:51:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 112ms (Views: 98.7ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 22:52:04 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"taco", "description"=>"cat", "class"=>"map", "currentRodent"=>"RAT", "rodents"=>{"0"=>{"lat"=>"40.680334375675834", "lng"=>"-73.98409213837586"}, "1"=>{"lat"=>"40.681473447922286", "lng"=>"-73.98025121506653"}, "2"=>{"lat"=>"40.67790971422487", "lng"=>"-73.97574510392151"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+Started GET "/" for ::1 at 2020-02-18 22:55:50 -0500
+  [1m[35m (41.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathanahern/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 1770ms (Views: 1750.4ms | ActiveRecord: 16.6ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 22:56:08 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"test", "description"=>"cat", "class"=>"map", "currentRodent"=>"RAT", "rodents"=>{"0"=>{"lat"=>"40.68022286727162", "lng"=>"-73.98416009604797"}, "1"=>{"lat"=>"40.681980287811704", "lng"=>"-73.98289409339294"}, "2"=>{"lat"=>"40.679669595660265", "lng"=>"-73.97619929969177"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+No template found for Api::ToursController#create, rendering head :no_content
+Completed 204 No Content in 120399ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 22:58:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 95ms (Views: 82.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 22:58:35 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"test", "description"=>"cat", "class"=>"map", "currentRodent"=>"OTHER", "rodents"=>{"0"=>{"lat"=>"40.67742799003445", "lng"=>"-73.98318495847472"}, "1"=>{"lat"=>"40.677151343204415", "lng"=>"-73.97975173093566"}, "2"=>{"lat"=>"40.679494668264894", "lng"=>"-73.9783355245758"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+No template found for Api::ToursController#create, rendering head :no_content
+Completed 204 No Content in 701403ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:10:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 571ms (Views: 549.1ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:13:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 570ms (Views: 550.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:19:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 492ms (Views: 487.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:20:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 659ms (Views: 651.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:23:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 876ms (Views: 870.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 23:24:03 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"taco", "description"=>"time", "class"=>"map", "currentRodent"=>"RAT", "rodents"=>{"0"=>{"lat"=>"40.67862513082237", "lng"=>"-73.98063279549257", "species"=>"rat"}, "1"=>{"lat"=>"40.674931053628704", "lng"=>"-73.98146964470521", "species"=>"rat"}, "2"=>{"lat"=>"40.67494732754539", "lng"=>"-73.98791767517702", "species"=>"rat"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+No template found for Api::ToursController#create, rendering head :no_content
+Completed 204 No Content in 38360ms (ActiveRecord: 18.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 23:34:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 90ms (Views: 76.6ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 23:34:52 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"First", "description"=>"Test rat rabbit squirrel", "class"=>"map", "currentRodent"=>"SQUIRREL", "rodents"=>{"0"=>{"lat"=>"40.678345968919736", "lng"=>"-73.98542192753906", "species"=>"rat"}, "1"=>{"lat"=>"40.676490811406396", "lng"=>"-73.98057249364014", "species"=>"rat"}, "2"=>{"lat"=>"40.67876906778954", "lng"=>"-73.97366312321778", "species"=>"rat"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVKDP5P4z9mTe60jUOtChA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mTour Create (48.0ms)[0m  [1m[32mINSERT INTO "tours" ("user_id", "name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["name", "First"], ["created_at", "2020-02-19 04:34:52.548697"], ["updated_at", "2020-02-19 04:34:52.548697"], ["description", "Test rat rabbit squirrel"]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+Started GET "/" for ::1 at 2020-02-18 23:44:19 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathanahern/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (332.9ms)
+Completed 200 OK in 1638ms (Views: 1365.2ms | ActiveRecord: 270.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-02-18 23:44:25 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"splinter@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (41.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "splinter@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:65
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "splinter@email.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65
+  [1m[36mUser Update (5.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["updated_at", "2020-02-19 04:44:25.860605"], ["id", 4]]
+  ↳ app/models/user.rb:65
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:65
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.4ms)
+Completed 200 OK in 333ms (Views: 7.5ms | ActiveRecord: 62.8ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 23:47:03 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"taco", "description"=>"cat", "class"=>"map", "currentRodent"=>"SQUIRREL", "rodents"=>{"0"=>{"lat"=>"40.677421569957964", "lng"=>"-73.982876222229", "species"=>"rat"}, "1"=>{"lat"=>"40.67981370371796", "lng"=>"-73.9810952354431", "species"=>"rat"}, "2"=>{"lat"=>"40.67664044646597", "lng"=>"-73.97712556610107", "species"=>"rat"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mTour Create (46.1ms)[0m  [1m[32mINSERT INTO "tours" ("user_id", "name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["name", "taco"], ["created_at", "2020-02-19 04:47:03.225999"], ["updated_at", "2020-02-19 04:47:03.225999"], ["description", "cat"]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mTour Load (0.4ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mRodent Create (82.2ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["lat", 40.677421569957964], ["lng", -73.982876222229], ["created_at", "2020-02-19 04:48:10.426946"], ["updated_at", "2020-02-19 04:48:10.426946"], ["tour_id", 7], ["species", "rat"]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mTour Load (0.5ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mRodent Create (0.5ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["lat", 40.67981370371796], ["lng", -73.9810952354431], ["created_at", "2020-02-19 04:48:10.513732"], ["updated_at", "2020-02-19 04:48:10.513732"], ["tour_id", 7], ["species", "rat"]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mTour Load (0.5ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[36mRodent Create (2.8ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["lat", 40.67664044646597], ["lng", -73.97712556610107], ["created_at", "2020-02-19 04:48:10.529917"], ["updated_at", "2020-02-19 04:48:10.529917"], ["tour_id", 7], ["species", "rat"]]
+  ↳ app/controllers/api/tours_controller.rb:44
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:44
+  Rendering api/tours/show.json.jbuilder
+  Rendered api/tours/_tour.json.jbuilder (0.4ms)
+  Rendered api/tours/show.json.jbuilder (2.1ms)
+Completed 200 OK in 67402ms (Views: 14.7ms | ActiveRecord: 193.3ms)
+
+
+  [1m[36mRodent Load (1.4ms)[0m  [1m[34mSELECT "rodents".* FROM "rodents"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2273323216395133035)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddOrder (20200219045101)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (52.1ms)[0m  [1m[35mALTER TABLE "rodents" ADD "ord" integer[0m
+  ↳ db/migrate/20200219045101_add_order.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200219045101"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (35.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2273323216395133035)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-02-18 23:55:31 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jonathanahern/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 463ms (Views: 449.7ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 23:56:21 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"Big test", "description"=>"Rodent rainbow!", "class"=>"map", "currentRodent"=>"MOUSE", "rodents"=>{"0"=>{"lat"=>"40.677837984204466", "lng"=>"-73.98268170767503", "species"=>"rat"}, "1"=>{"lat"=>"40.687601194622076", "lng"=>"-73.9746994536467", "species"=>"rabbit"}, "2"=>{"lat"=>"40.684542209204736", "lng"=>"-73.9593357604094", "species"=>"squirrel"}, "3"=>{"lat"=>"40.66625045246016", "lng"=>"-73.96268315725999", "species"=>"other"}, "4"=>{"lat"=>"40.666380660631816", "lng"=>"-73.9824242156096", "species"=>"raccoon"}, "5"=>{"lat"=>"40.672500157940114", "lng"=>"-73.98559995108323", "species"=>"mouse"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mTour Create (1.2ms)[0m  [1m[32mINSERT INTO "tours" ("user_id", "name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["name", "Big test"], ["created_at", "2020-02-19 04:56:21.458625"], ["updated_at", "2020-02-19 04:56:21.458625"], ["description", "Rodent rainbow!"]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (0.5ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (0.7ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.677837984204466], ["lng", -73.98268170767503], ["created_at", "2020-02-19 04:56:34.374547"], ["updated_at", "2020-02-19 04:56:34.374547"], ["tour_id", 8], ["species", "rat"], ["ord", 0]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (0.4ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (0.4ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.687601194622076], ["lng", -73.9746994536467], ["created_at", "2020-02-19 04:56:34.419201"], ["updated_at", "2020-02-19 04:56:34.419201"], ["tour_id", 8], ["species", "rabbit"], ["ord", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (0.5ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (5.2ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.684542209204736], ["lng", -73.9593357604094], ["created_at", "2020-02-19 04:56:34.428006"], ["updated_at", "2020-02-19 04:56:34.428006"], ["tour_id", 8], ["species", "squirrel"], ["ord", 2]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (0.6ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.66625045246016], ["lng", -73.96268315725999], ["created_at", "2020-02-19 04:56:34.442130"], ["updated_at", "2020-02-19 04:56:34.442130"], ["tour_id", 8], ["species", "other"], ["ord", 3]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (0.7ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (0.6ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.666380660631816], ["lng", -73.9824242156096], ["created_at", "2020-02-19 04:56:34.455238"], ["updated_at", "2020-02-19 04:56:34.455238"], ["tour_id", 8], ["species", "raccoon"], ["ord", 4]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mTour Load (3.8ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[36mRodent Create (2.4ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.672500157940114], ["lng", -73.98559995108323], ["created_at", "2020-02-19 04:56:34.468691"], ["updated_at", "2020-02-19 04:56:34.468691"], ["tour_id", 8], ["species", "mouse"], ["ord", 5]]
+  ↳ app/controllers/api/tours_controller.rb:45
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:45
+  Rendering api/tours/show.json.jbuilder
+  Rendered api/tours/_tour.json.jbuilder (0.5ms)
+  Rendered api/tours/show.json.jbuilder (3.1ms)
+Completed 200 OK in 13067ms (Views: 20.5ms | ActiveRecord: 90.6ms)
+
+
+  [1m[36mTour Load (0.5ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" ORDER BY "tours"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRodent Load (1.0ms)[0m  [1m[34mSELECT "rodents".* FROM "rodents"[0m
+Started GET "/" for ::1 at 2020-02-18 23:59:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 97ms (Views: 88.4ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-18 23:59:41 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"", "description"=>"", "class"=>"map", "currentRodent"=>"SQUIRREL", "rodents"=>{"0"=>{"lat"=>"40.67830407615098", "lng"=>"-73.98234522275392", "species"=>"rat"}, "1"=>{"lat"=>"40.680175455845415", "lng"=>"-73.98101484708253", "species"=>"rabbit"}, "2"=>{"lat"=>"40.67963845661212", "lng"=>"-73.97818243436281", "species"=>"squirrel"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (40.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+Completed 401 Unauthorized in 72ms (Views: 0.3ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-19 00:00:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-02-19 00:00:13 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XIM9ytvKt3kZ_5kZdIdE-g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:65
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "splinter@email.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2PEWmrbklABi8757Q-lQSA"], ["updated_at", "2020-02-19 05:00:13.668646"], ["id", 4]]
+  ↳ app/models/user.rb:65
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:65
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 42.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-02-19 00:00:16 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"splinter@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "splinter@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:65
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "splinter@email.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vqFbR50j3RHgOHt9qikr8w"], ["updated_at", "2020-02-19 05:00:16.539248"], ["id", 4]]
+  ↳ app/models/user.rb:65
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:65
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (0.5ms)
+Completed 200 OK in 270ms (Views: 13.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/api/tours" for ::1 at 2020-02-19 00:00:58 -0500
+Processing by Api::ToursController#create as JSON
+  Parameters: {"tour"=>{"name"=>"test", "description"=>"order", "class"=>"map", "currentRodent"=>"SQUIRREL", "rodents"=>{"0"=>{"lat"=>"40.678678356292686", "lng"=>"-73.98219501904909", "species"=>"rat"}, "1"=>{"lat"=>"40.68043581755286", "lng"=>"-73.98118650845949", "species"=>"rabbit"}, "2"=>{"lat"=>"40.67957336550202", "lng"=>"-73.97831118039552", "species"=>"squirrel"}}}}
+Unpermitted parameters: :class, :currentRodent, :rodents
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vqFbR50j3RHgOHt9qikr8w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[36mTour Create (5.3ms)[0m  [1m[32mINSERT INTO "tours" ("user_id", "name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["name", "test"], ["created_at", "2020-02-19 05:00:58.178181"], ["updated_at", "2020-02-19 05:00:58.178181"], ["description", "order"]]
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mRodent Create (5.4ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.678678356292686], ["lng", -73.98219501904909], ["created_at", "2020-02-19 05:02:40.223523"], ["updated_at", "2020-02-19 05:02:40.223523"], ["tour_id", 9], ["species", "rat"], ["ord", 0]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mTour Load (1.0ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mRodent Create (0.4ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.68043581755286], ["lng", -73.98118650845949], ["created_at", "2020-02-19 05:02:59.217064"], ["updated_at", "2020-02-19 05:02:59.217064"], ["tour_id", 9], ["species", "rabbit"], ["ord", 1]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[36mRodent Create (0.6ms)[0m  [1m[32mINSERT INTO "rodents" ("lat", "lng", "created_at", "updated_at", "tour_id", "species", "ord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["lat", 40.67957336550202], ["lng", -73.97831118039552], ["created_at", "2020-02-19 05:03:00.055161"], ["updated_at", "2020-02-19 05:03:00.055161"], ["tour_id", 9], ["species", "squirrel"], ["ord", 2]]
+  ↳ app/controllers/api/tours_controller.rb:46
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tours_controller.rb:46
+  Rendering api/tours/show.json.jbuilder
+  Rendered api/tours/_tour.json.jbuilder (0.6ms)
+  Rendered api/tours/show.json.jbuilder (5.9ms)
+Completed 200 OK in 121939ms (Views: 15.3ms | ActiveRecord: 148.6ms)
+
+
+  [1m[36mRodent Load (0.4ms)[0m  [1m[34mSELECT  "rodents".* FROM "rodents" ORDER BY "rodents"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRodent Load (1.4ms)[0m  [1m[34mSELECT  "rodents".* FROM "rodents" ORDER BY "rodents"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRodent Load (0.3ms)[0m  [1m[34mSELECT  "rodents".* FROM "rodents" WHERE "rodents"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mRodent Load (0.4ms)[0m  [1m[34mSELECT  "rodents".* FROM "rodents" WHERE "rodents"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]

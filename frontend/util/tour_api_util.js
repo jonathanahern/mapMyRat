@@ -6,3 +6,9 @@ export const createTour = tour => {
     });
 };
 
+export const fetchTours = () => {
+    return $.ajax({
+        url: "api/tours",
+        method: "GET"
+    });
+};

@@ -27,6 +27,11 @@ const Greeting = ({ user, logout }) => {
                 </Link>
                 </div>
                 <div>
+                    <Link to="/tours" id="navLink">
+                        TOURS
+                    </Link>
+                </div>
+                <div>
                     <Link to="/tours/create" id="navLink">
                         CREATE TOUR
                     </Link>

@@ -1,5 +1,6 @@
 import {
-    RECEIVE_TOUR
+    RECEIVE_TOUR,
+    RECEIVE_TOURS
 } from '../actions/tour_actions';
 
 const toursReducer = (state = {}, action) => {

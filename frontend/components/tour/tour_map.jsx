@@ -97,10 +97,10 @@ class TourMap extends React.Component {
 
         let data = {
             bounds: {
-                west: this.center['lng'] - .5,
-                east: this.center['lng'] + .5,
-                south: this.center['lat'] - .5,
-                north: this.center['lat'] + .5
+                west: this.center['lng'] - .2,
+                east: this.center['lng'] + .2,
+                south: this.center['lat'] - .2,
+                north: this.center['lat'] + .2
             }
         };
         let bounds = new google.maps.LatLngBounds(
@@ -191,7 +191,6 @@ class TourMap extends React.Component {
         const wayPoints = this.coordsArray.slice(1, this.coordsArray.length - 1).map(locale => ({
             location: locale
         }));
-        debugger
         const newOrigin = { lat: this.coordsArray[0]["lat"], lng: this.coordsArray[0]["lng"]};
         const newDest = { lat: this.coordsArray[this.coordsArray.length - 1]["lat"], lng: this.coordsArray[this.coordsArray.length - 1]["lng"] };
         const directionsRequestParams = {
@@ -277,14 +276,14 @@ class TourMap extends React.Component {
 
             document.getElementById("mapToolsId").className ="mapTools"
             document.getElementById("map-container").className = "map"
-            document.getElementById("cool-possum").className = ""
+            // document.getElementById("cool-possum").className = ""
 
 
         } else {
 
             document.getElementById("mapToolsId").className = "mapTools dance"
             document.getElementById("map-container").className = "map dance"
-            document.getElementById("cool-possum").className = "show"
+            // document.getElementById("cool-possum").className = "show"
 
             this.dancing = true;
             for (let i = 0; i < this.markersArray.length; i++) {
@@ -322,7 +321,7 @@ class TourMap extends React.Component {
                     </form>
                 </div>
                     <div id='map-container' className={this.state.class}>
-                            
+                            LOADING
                     </div>
                     <div id="mapToolsId" className="mapTools">
 
@@ -346,7 +345,7 @@ class TourMap extends React.Component {
                     </div>
                 
             </div>
-                <marquee id="cool-possum" behavior="" direction=""><img src={window.coolPossumURL} alt="" /></marquee>
+                {/* <marquee id="cool-possum" behavior="" direction=""><img src={window.coolPossumURL} alt="" /></marquee> */}
             </>
         );
     }

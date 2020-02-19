@@ -8,6 +8,8 @@ const toursReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_TOUR:
             return action.tour;
+        case RECEIVE_TOURS:
+            return Object.assign({}, state, action.tours);
         default:
             return state;
     }

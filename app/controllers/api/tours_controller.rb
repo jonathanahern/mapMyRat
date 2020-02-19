@@ -1,9 +1,9 @@
 class Api::ToursController < ApplicationController
 
-  # def index
-  #   @tours = Rodent.all
-  #   render :index
-  # end
+  def index
+    @tours = Tour.all
+    render :index
+  end
 
   def create
     rodents = create_rodents
@@ -34,7 +34,6 @@ class Api::ToursController < ApplicationController
   end
 
   def save_the_rodents(rodents, tour_id)
-    
     rodents.each_with_index do |subarr, i|
       @rodent = Rodent.new
       @rodent.lat = subarr[0].to_f

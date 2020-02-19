@@ -3,12 +3,12 @@ import * as APIUtil from "../util/tour_api_util";
 export const RECEIVE_TOUR = "RECEIVE_TOUR";
 export const RECEIVE_TOURS = "RECEIVE_TOURS";
 
-export const receiveTour = tour => ({
+const receiveTour = tour => ({
     type: RECEIVE_TOUR,
     tour
 });
 
-export const receiveTours = tours => ({
+const receiveTours = tours => ({
     type: RECEIVE_TOURS,
     tours
 });

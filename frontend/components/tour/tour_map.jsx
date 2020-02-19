@@ -248,7 +248,7 @@ class TourMap extends React.Component {
             return null;
         }  
         let firstCoord = this.coordsArray[0];
-        firstCoord.push(this.currentRodent.toLowerCase());
+        firstCoord["species"] = (this.currentRodent.toLowerCase());
         this.coordsArray.push(firstCoord);
         let image = {
             url: this.selectedIconImage,

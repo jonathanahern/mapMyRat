@@ -8,7 +8,7 @@ import RodentIndexContainer from "../components/rodents/rodent_index_container"
 import TourContainer from "../components/tour/tour_container"
 import TourIndexContainer from "../components/tour_index/tour_index_container"
 
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <>
@@ -18,10 +18,9 @@ const App = () => (
     <div className="shadowLine"></div>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <Route exact path="/tours/create" component={TourContainer} />
-    <Route exact path="/tours" component={TourIndexContainer} />
-    <Route exact path="/rodents" component={RodentIndexContainer} />
-    <Route exact path="/" component={Splash} />
+    <ProtectedRoute exact path="/tours/create" component={TourContainer} />
+    <ProtectedRoute exact path="/tours" component={TourIndexContainer} />
+    <AuthRoute exact path="/" component={Splash} />
   </>
 );
 

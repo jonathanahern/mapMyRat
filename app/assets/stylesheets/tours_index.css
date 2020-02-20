@@ -14,7 +14,7 @@
     margin-left: 64px;
     width: 550px;
     min-height: 260px;
-    border: solid 1px rgb(205,205,205);
+    border: solid .5px rgb(205,205,205);
     margin-top: 36px;
     margin-bottom: 36px;
     display: flex;
@@ -27,7 +27,7 @@
     left: -70px;
     height: 55px;
     width: 55px;
-    border: solid .5px rgb(205,205,205);
+    border-right: solid .25px rgb(205,205,205);
     box-shadow: #e0e0e0 2px 2px 0;
 }
 
@@ -68,15 +68,85 @@
 }
 
 #tour-details-container div {
+    text-align: center;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#tour-details-container span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#tour-details-container section {
     font-family: 'Ariel', sans-serif;
     font-weight: 100;
+    color: #666666
+}
+
+#distance .distance-stats {
+    margin: auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #666666;
+}
+
+#distance h4 {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.distance-stats span{
+    font-family: 'Ariel', sans-serif;
+    font-weight: 100;
+    color: #666666;
+    font-size: 12px;
+}
+
+#tour-details-container div:last-child {
+    display: block;
+    /* background-color: blue; */
+}
+
+#tour-details-container #map-image {
+    overflow: hidden;
+    display: flex;
+}
+
+#map-image-file{
+    height: 178px;
+    margin: 0 auto;
+}
+
+.distance-stats{
+    font-family: "Roboto", sans-serif;
+}
+
+.rodent-stats{
+    margin: auto;
+    margin-top: 6px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #666666;
+}
+
+#rodent-count #rodent-holder {
+    margin-top: 20px;
+    border: none;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.rodentPic {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 3px;
+}
+
+.buttonClick:active, .toolButtonHolder button:active, .rodentIcons:active {
+  transform: translateY(1px);
 }

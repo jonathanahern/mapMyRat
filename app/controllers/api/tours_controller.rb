@@ -1,8 +1,7 @@
 class Api::ToursController < ApplicationController
 
   def index
-    tours = Tour.all
-    @tours = tours.includes(:rodents)
+    @tours = Tour.includes(:rodents).all
     render :index
   end
 
@@ -22,7 +21,7 @@ class Api::ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name,:description)
+    params.require(:tour).permit(:name,:description,:distance)
   end
 
   def create_rodents

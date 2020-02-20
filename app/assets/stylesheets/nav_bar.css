@@ -90,7 +90,7 @@ button:focus {
     box-shadow: #C8C7CC 0px 2px 5px;
 }
 
-.profileMenu li{
+.profileMenu li {
    padding: 10px 0;
    padding-left: 20px;
     font-size: 13px;
@@ -100,6 +100,11 @@ button:focus {
     background-color: #F8F8F8; 
     border: 1px solid #C8C7CC;
     z-index: 100;
+}
+
+.profileMenu #logout-link {
+    text-decoration: none;
+
 }
 
 #userProfile:hover + .profileMenu, .profileMenu:hover {

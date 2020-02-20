@@ -47,11 +47,11 @@
 
 #route-input input {
      width: 246px;
-     margin-bottom: 12px;
+     margin: 6px 0;
 }
 
 #route-input textarea {
-     margin-bottom: 12px;
+    margin: 6px 0;
     background: white;
     border-radius: 5px;
     border: solid 1px #D3D6DC;
@@ -62,8 +62,39 @@
 }
 
 .loading {
-    background-color: #B4B3B3;
+    background-color: rgb(228, 228, 228);
     z-index: 5;
+}
+
+#loadScreen{
+    /* position: absolute;
+    background-color: #B4B3B3;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -100; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loadScreen h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62px;
+    color: salmon;
+    letter-spacing: 8px;
+}
+
+#loadScreen img{
+    transition-duration: 0.3s;
+    animation-direction: alternate;
+    transition: transform 1s ease-in-out;
+    width: 300px;
+    animation: bobble 1.5s;
+    animation-iteration-count: infinite;
+
 }
 
 #create-container h4 {
@@ -100,7 +131,7 @@
     background-color: white;
     z-index: 101;
     position: absolute;
-    top: 100px;
+    top: 125px;
     left: 310px;
     z-index: 99;
     border-radius: 3px;
@@ -111,6 +142,31 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
 }
 
+#distance-div{
+    background-color: rgb(97,97,98, .8);
+    height: 40px;
+    width: 170px;
+    position: absolute;
+    margin-bottom: 100px;
+    top:-40px;
+    padding: 4px;
+    box-sizing: border-box; 
+    border-radius: 4px 4px 0 0; 
+}
+#distance-div h2{
+    font-family: 'Open San', sans-serif;
+    font-size: 11px;
+    color: #E3E3E3;
+}
+
+#distance-div h3{
+    font-family: 'condensed Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: left;
+}
 
 
 .mapTools ul{
@@ -199,9 +255,13 @@
   border: 5px solid yellow;
 }
 
+.danceTools {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+  background-color: yellow;
+}
 
-
-/* marquee{
+marquee{
     display: block;
     position: absolute;
     bottom: 0;
@@ -216,19 +276,30 @@ marquee img{
 
 .show {
     opacity: 1.0;
-} */
+}
 
 
 @keyframes shake {
-  0% { background-color: red; border: 5px solid red;}
+  0% { background-color: red; border-color: red;}
   10% { color: red; }
-  20% { background-color: purple; border: 5px solid purple;}
+  20% { background-color: purple; border-color: purple;}
   30% { color: purple;}
-  40% { background-color: yellowgreen; border: 5px solid yellowgreen;}
+  40% { background-color: yellowgreen; border-color: yellowgreen;}
   50% { color: yellowgreen;}
-  60% { background-color: yellow; border: 5px solid yellow;}
+  60% { background-color: yellow; border-color: yellow;}
   70% { color: yellow;}
-  80% { background-color: orange; border: 5px solid orange;}
+  80% { background-color: orange; border-color: orange;}
   90% {  color: orange;}
-  100% { background-color: blue; border: 5px solid blue;}
+  100% { background-color: blue; border-color: blue;}
+}
+
+@keyframes bobble {
+  0% { transform: translateY(2px); transform: rotate(-2deg); }
+
+  30% { transform: translateX(2px); transform: rotate(2deg); }
+
+  60% { transform: translateY(-2px); transform: rotate(-2deg); }
+
+  100% { transform: translateX(-2px); transform: rotate(2deg); }
+
 }

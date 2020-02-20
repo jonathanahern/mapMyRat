@@ -8,10 +8,11 @@ const receiveTour = tour => ({
     tour
 });
 
-const receiveTours = tours => ({
+const receiveTours = tours => { 
+    return{
     type: RECEIVE_TOURS,
     tours
-});
+}};
 
 export const createTour = tour => dispatch =>
     APIUtil.createTour(tour).then(

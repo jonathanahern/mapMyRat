@@ -3,7 +3,8 @@ import TourIndexItem from "./tour_index_item"
 
 class TourIndex extends React.Component {
     componentDidMount() {
-        return this.props.fetchTours();
+        this.props.fetchUsers();
+        this.props.fetchTours();
     }
 
     getCurrentDate(separator = '') {
@@ -19,13 +20,19 @@ class TourIndex extends React.Component {
         return `${dayArr[day - 1].toUpperCase()}, ${monthArr[month - 1].toUpperCase()} ${date}, ${year}`
     }
 
-    render() {
+    render(){
+        let tourArr;
+        if (this.props.tours.length > 0) {
+            tourArr = this.props.tours.map(tour => (<TourIndexItem tour={tour} users={this.props.users} key={tour.id} />))
+        } else {
+            tourArr = [];
+        }
         return (
             <>
                 <ul className="tours-container">
                     <li>{this.getCurrentDate()}</li>
                     {
-                        this.props.tours.map(tour => (<TourIndexItem tour={tour} users={this.props.users} key={tour.id} />))
+                        tourArr
                     }
                 </ul>
             </>

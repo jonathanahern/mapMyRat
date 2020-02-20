@@ -7,7 +7,7 @@ const toursReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_TOUR:
-            return action.tour;
+            return Object.assign({}, state, {[action.tour.id]: action.tour} );
         case RECEIVE_TOURS:
             return Object.assign({}, state, action.tours);
         default:

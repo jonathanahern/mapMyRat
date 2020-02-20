@@ -15,12 +15,15 @@ class TourMap extends React.Component {
             name: "",
             description: "",
             class: "loading",
-            currentRodent: "RAT"
+            currentRodent: "RAT",
+            distance: 0
+
         };
 
         this.markersArray = [];
         this.coordsArray = [];
         this.startMarker = null;
+        this.distanceArray = []
         this.map = null;
         this.geocoder = new google.maps.Geocoder();
         this.currentRodent = "rat";
@@ -44,6 +47,8 @@ class TourMap extends React.Component {
         this.toolClear = this.toolClear.bind(this);
         this.toolReturn = this.toolReturn.bind(this);
         this.toolDance = this.toolDance.bind(this);
+        this.getDistance = this.getDistance.bind(this);
+        this.distanceReturn = this.distanceReturn.bind(this);
         
     }
 
@@ -74,11 +79,11 @@ class TourMap extends React.Component {
     }
 
     loadMap(){
+        // return null;
         const mapOptions = {
             center: this.center,
             zoom: this.zoom
         };
-
         this.map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
 
         google.maps.event.addListener(this.map, 'click', (event) => {
@@ -138,8 +143,13 @@ class TourMap extends React.Component {
         e.preventDefault();
         const rodents = {rodents: this.coordsArray}
         const tour = Object.assign({}, this.state, rodents);
-        if (this.markersArray.length > 1){
+        if (this.state.name.length < 1){
+            let error = document.getElementById("tour-name-error");
+            error.className = "error show"
+        }
+        if (this.markersArray.length > 1 && this.state.name.length > 0){
             this.props.createTour(tour);
+            this.props.history.push('/tours');
         }
     }
 
@@ -158,6 +168,7 @@ class TourMap extends React.Component {
             this.startMarker.setAnimation(google.maps.Animation.BOUNCE)
         }
         if (this.markersArray.length > 1) {
+            this.getDistance();
             this.calculateAndDisplayRoute();
         }  
     }
@@ -226,6 +237,15 @@ class TourMap extends React.Component {
         this.directionsDisplay.setMap(null);
         this.calculateAndDisplayRoute();
 
+        this.distanceArray.pop();
+        let fullDist = this.distanceArray.reduce((a, b) => a + b, 0);
+        fullDist = fullDist * 0.62137;
+        fullDist = (Math.round(fullDist * 10) / 10).toFixed(1)
+        if (fullDist < .5){
+            fullDist = 0;
+        }
+        this.setState({ distance: fullDist })
+
     }
 
     toolClear(e){
@@ -238,6 +258,8 @@ class TourMap extends React.Component {
         this.markersArray = [];
         this.directionsDisplay.setMap(null);
         this.directionsDisplay = new google.maps.DirectionsRenderer({ suppressMarkers: true, preserveViewport: true });
+        this.distanceArray = [];
+        this.setState({ distance: 0 })
 
     }
 
@@ -262,6 +284,7 @@ class TourMap extends React.Component {
             this.startMarker.setAnimation(google.maps.Animation.BOUNCE)
         }
         this.calculateAndDisplayRoute();
+        this.getDistance();
     }
 
     toolDance(e){
@@ -276,20 +299,49 @@ class TourMap extends React.Component {
 
             document.getElementById("mapToolsId").className ="mapTools"
             document.getElementById("map-container").className = "map"
-            // document.getElementById("cool-possum").className = ""
+            document.getElementById("cool-possum").className = ""
 
 
         } else {
 
-            document.getElementById("mapToolsId").className = "mapTools dance"
+            document.getElementById("mapToolsId").className = "mapTools danceTools"
             document.getElementById("map-container").className = "map dance"
-            // document.getElementById("cool-possum").className = "show"
+            document.getElementById("cool-possum").className = "show"
 
             this.dancing = true;
             for (let i = 0; i < this.markersArray.length; i++) {
                 const marker = this.markersArray[i];
                 marker.setAnimation(google.maps.Animation.BOUNCE)
             }
+        }
+    }
+
+    getDistance(){
+        let last = this.coordsArray[this.coordsArray.length-1];
+        let secondLast = this.coordsArray[this.coordsArray.length - 2];
+        var origin = new google.maps.LatLng(secondLast["lat"], secondLast["lng"]);
+        var destination = new google.maps.LatLng(last["lat"], last["lng"]);
+
+        var service = new google.maps.DistanceMatrixService();
+        service.getDistanceMatrix(
+            {
+                origins: [origin],
+                destinations: [destination],
+                travelMode: 'WALKING'
+            }, this.distanceReturn);
+
+    }
+
+    distanceReturn(response, status) {
+        if (status == 'OK') {
+            let dist = response.rows[0].elements[0].distance.text;
+            dist = dist = dist.replace(/\,/g, '');
+            dist = parseFloat(dist);
+            this.distanceArray.push(dist)
+            let fullDist = this.distanceArray.reduce((a, b) => a + b, 0);
+            fullDist = fullDist * 0.62137;
+            fullDist = (Math.round(fullDist * 10) / 10).toFixed(1)
+            this.setState({ distance: fullDist })
         }
     }
 
@@ -304,7 +356,7 @@ class TourMap extends React.Component {
                             <div>
                             <form onSubmit={this.codeAddress}>
                                 <input type="text" placeholder="Select location" id="searchVal"/>
-                                    <input id="selectLocationButton" type="submit" value="SEARCH" />
+                                    <input id="selectLocationButton" className="buttonClick" type="submit" value="SEARCH" />
                                 </form>
                             </div>
                     </div>
@@ -315,16 +367,24 @@ class TourMap extends React.Component {
                         <h4>Route Details</h4>
                         <ul id="route-input">
                             <li><input type="text" placeholder="Tour Name" value={this.state.name} onChange={this.update("name")}/> <span>*</span> </li>
+                            <li id="tour-name-error" className="error hidden">A tour name is required</li>
                             <li><textarea rows="5" cols="33" placeholder="Description" value={this.state.description} onChange={this.update("description")}/></li>
-                            <li><input id="saveTourButton" type="submit" value="SAVE TOUR" /></li>
+                            <li><input id="saveTourButton" className="buttonClick" type="submit" value="SAVE TOUR" /></li>
                         </ul>
                     </form>
                 </div>
                     <div id='map-container' className={this.state.class}>
-                            LOADING
+                        <div id="loadScreen">
+                            <img src={window.ratMarkerURL} alt="Sourced from Flaticon.com" alt=""/>
+                            <br/>
+                            <h3>LOADING</h3>
+                        </div>
                     </div>
                     <div id="mapToolsId" className="mapTools">
-
+                        <div id="distance-div">
+                            <h2>DISTANCE</h2>
+                            <h3>{this.state.distance} MI</h3> 
+                        </div>
                         <ul className="toolButtonHolder">
                             <li><button onClick={this.toolUndo}><img src={window.undoURL} alt="Sourced from Flaticon.com" />UNDO</button></li>
                             <li><button onClick={this.toolClear}><img src={window.clearURL} alt="Sourced from Flaticon.com" />CLEAR</button></li>
@@ -345,7 +405,7 @@ class TourMap extends React.Component {
                     </div>
                 
             </div>
-                {/* <marquee id="cool-possum" behavior="" direction=""><img src={window.coolPossumURL} alt="" /></marquee> */}
+                <marquee id="cool-possum" behavior="" direction=""><img src={window.coolPossumURL} alt="" /></marquee>
             </>
         );
     }

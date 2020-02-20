@@ -50,3 +50,19 @@ table {
 body, #root, html{
 	height: 100%;
 }
+
+.hidden{
+	display: none;
+}
+
+.show {
+	display: inherit;
+}
+
+.error {
+	font-family: 'Ariel', sans-serif;
+	color: red;
+	font-style: italic;
+	font-size: 12px;
+	margin-left: 4px;
+}

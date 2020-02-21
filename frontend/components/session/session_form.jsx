@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
             <p>OR</p>
             <hr/>
           </div>
-          <p className="error">{this.renderErrors()}</p>
+          <div className="error">{this.renderErrors()}</div>
           <input
             type="text"
             value={this.state.email}

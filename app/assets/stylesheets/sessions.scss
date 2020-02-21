@@ -132,6 +132,10 @@
   padding-left: 15px;
 }
 
+.birthdaySelect{
+    position:relative;
+}
+
 #countryDropdown{
     margin: 0;
     width: 315px;
@@ -148,18 +152,18 @@
 }
 
 #arrowDay {
-    bottom: 325px;
-    right: 275px;
+    bottom: 14px;
+    right: 250px;
 }
 
 #arrowMonth {
-    bottom: 325px;
-    right: 145px;
+    bottom: 14px;
+    right: 125px;
 }
 
 #arrowYear {
-    bottom: 325px;
-    right: 35px;
+    bottom: 14px;
+    right: 15px;
 }
 
 #arrowCountry {

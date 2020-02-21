@@ -39,7 +39,12 @@ class User < ApplicationRecord
   end
 
   def generate_birthday
-    self.birthday = Date.new(year.to_i, month.to_i, day.to_i) unless day.nil?
+    return nil if day.nil?
+    if day.length < 1 || month.length < 1 || year.length < 1
+      self.birthday = Date.new(1999, 12, 31)
+    else
+      self.birthday = Date.new(year.to_i, month.to_i, day.to_i)
+    end
   end
 
   def generate_profile_pic

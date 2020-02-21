@@ -29,10 +29,19 @@
     font-weight: bold;
 }
 
-#footer-container li {
+#footer-container li a {
     font-family: "Muli", sans-serif;
     font-weight: bold;
     font-size: 12px;
-    margin: 4px 0;
+    text-decoration: none;
+    color: #9DA0A2;
+}
 
+#footer-container li  {
+    margin: 3px 0;
+}
+
+#footer-container li a:hover {
+    color: white;
+    text-decoration: underline;
 }

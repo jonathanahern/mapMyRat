@@ -23,7 +23,7 @@ class TourIndex extends React.Component {
 
     render(){
         let tourArr;
-        if (this.props.tours.length > 0) {
+        if (this.props.tours.length > 0 && Object.values(this.props.users).length > 0) {
             tourArr = this.props.tours.map( (tour,index) => (<TourIndexItem tour={tour} count={index} users={this.props.users} key={tour.id} />))
         } else {
             tourArr = [];

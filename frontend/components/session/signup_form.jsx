@@ -76,7 +76,6 @@ class SignupForm extends React.Component {
 
     return (
       <div className="signupModule">
-        <p className="error">{this.renderErrors()}</p>
         <form onSubmit={this.handleSubmit}>
           <ul className="signupForm">
             <li>
@@ -213,7 +212,9 @@ class SignupForm extends React.Component {
               <p>By signing up with MapMyRat, you agree to nothing important & rats are not that bad.</p>
             </li>
             <input id="signupButton" type="submit" value="SIGN UP" />
+            <div className="error">{this.renderErrors()}</div>
           </ul>
+          
         </form>
       </div>
       

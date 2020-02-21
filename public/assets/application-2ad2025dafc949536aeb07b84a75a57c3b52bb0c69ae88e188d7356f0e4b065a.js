@@ -13287,7 +13287,6 @@ function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      debugger;
 
       if (this.state.password.length < 1) {
         document.getElementById("password-field").className = "error show";

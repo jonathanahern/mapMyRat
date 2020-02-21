@@ -1,0 +1,1154 @@
+#footer-container{
+    width: 100%;
+    height: 100px;
+    background-color: #1F2326;
+    color: white;
+    padding:4px;
+}
+
+#footer-container div:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 100px;
+}
+
+#footer-container div:first-child div{
+    width: 120px;
+}
+
+#rat-footer{
+    position: relative;
+    top: -70px;
+    height: 170px;
+}
+
+#footer-container h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+#footer-container li {
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 4px 0;
+
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    width: 75%;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.shadowLine{
+    border-bottom: 1px #D6D6D6 solid;
+    box-shadow: 0px 2px 3px #D6D6D6;
+    width: 100%;
+    height: 1px;
+}
+
+button:focus {
+    outline:0;
+}
+
+.logo {
+    position: relative;
+    margin-top: 1px;
+}
+
+.signupNav {
+    background-color: #1ddd7c;
+    color: white;
+}
+.logo img {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 120px;
+    bottom: -8px;
+}
+
+.loginNav {
+    background-color: transparent;
+}
+
+.loginNav, .signupNav {
+    margin: 0 8px;
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Arial', sans-serif;
+    border: none;
+}
+
+.loginNav:hover {
+    background-color: ghostwhite;
+}
+
+ .signupNav:hover {
+    background-color: #1f8d2d;
+ }
+
+ .logo span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: inline-block;
+ }
+
+ #userProfile {
+     object-fit: cover;
+     width: 35px;
+     height: 35px;
+     padding-bottom: 20px;
+     position: relative;
+     top: 12px;
+ }
+
+#profile{
+    position: relative;
+}
+
+.profileMenu {
+    position: absolute;
+    display: none;
+    width: 90px;
+    right: 0px;
+    top: 61px;
+    border-radius: 0 0 3px 3px;
+    z-index: 100;
+    box-shadow: #C8C7CC 0px 2px 5px;
+}
+
+.profileMenu li {
+   padding: 10px 0;
+   padding-left: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Ariel', sans-serif;
+    color: #6D717A;
+    background-color: #F8F8F8; 
+    border: 1px solid #C8C7CC;
+    z-index: 100;
+}
+
+.profileMenu #logout-link {
+    text-decoration: none;
+
+}
+
+#userProfile:hover + .profileMenu, .profileMenu:hover {
+    display: block;
+    cursor: pointer;
+}
+
+#navLink  {
+    color: #9297a3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#navLink:hover {
+    color: #666666;
+    cursor: pointer;
+}
+
+.navBarLeft > div{
+    margin: 0 20px;
+}
+.navBarLeft{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileMenu li:last-child{
+    border-radius: 0 0 3px 3px;
+}
+
+ .logo span:nth-child(1) {
+        color: #0689CE;
+ }
+  .logo span:nth-child(2) {
+        color: #0A8FD3;
+ }
+  .logo span:nth-child(3) {
+        color:#0D98DA;
+ }
+  .logo span:nth-child(4) {
+        color: #13A4E2;
+ }
+  .logo span:nth-child(5) {
+        color: #1BB4EE;
+ }
+  .logo span:nth-child(6) {
+        color: #1EBBF4;
+ }
+  .logo span:nth-child(7) {
+        color: #1EBCF5;
+ }
+   .logo span:nth-child(8) {
+        color: #1EBCF5;
+ }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, #root, html{
+	height: 100%;
+}
+
+.hidden{
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.error {
+	font-family: 'Ariel', sans-serif;
+	color: red;
+	font-size: 12px;
+	margin-left: 4px;
+}
+/* line 1, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginModule, .signupModule {
+  background-color: #F8F8F8;
+  position: fixed;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: scroll;
+}
+
+/* line 12, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm, .signupForm {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -180px;
+  width: 320px;
+  padding: 20px;
+}
+
+/* line 21, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input, .signupForm input {
+  background: #F8F8F8;
+  border: solid 1px #D3D6DC;
+  width: 300px;
+  height: 20px;
+  margin: 12px 0;
+  padding: 10px 0 10px 15px;
+  font-size: 12px;
+}
+
+/* line 31, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+::placeholder {
+  color: #9296A3;
+  font-size: 14px;
+}
+
+/* line 36, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.whiteInput {
+  background: #F8F8F8;
+}
+
+/* line 40, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input:last-child, .loginForm input:nth-child(2), #signupDemo, #signupButton {
+  padding: 0;
+  background-color: #1ddd7c;
+  border-radius: 2px;
+  width: 315px;
+  height: 40px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Ariel', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  border: none;
+}
+
+/* line 55, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input:last-child:hover, #signupButton:hover {
+  background-color: #21b66b;
+}
+
+/* line 59, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input:nth-child(2):hover, #signupDemo:hover {
+  background-color: #0b2261;
+}
+
+/* line 63, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#signupButton {
+  margin-top: 40px;
+}
+
+/* line 67, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signUpLink, .loginLink {
+  color: #9296A3;
+  text-decoration: none;
+  font-family: 'Ariel', sans-serif;
+  font-size: 12px;
+  position: absolute;
+  right: 26px;
+  top: 8px;
+}
+
+/* line 77, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input:last-child {
+  background-color: #1ddd7c;
+}
+
+/* line 81, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.loginForm input:nth-child(2), #signupDemo {
+  background-color: #3B5998;
+}
+
+/* line 85, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.orBreak {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 90, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.orBreak hr {
+  border: .5px solid #C8C7CC;
+  width: 135px;
+}
+
+/* line 95, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.orBreak p {
+  color: #9296A3;
+  font-family: 'Muli', sans-serif;
+  font-size: 11px;
+  margin-top: 3px;
+  display: inline-block;
+}
+
+/* line 103, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#orBreakSignup {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 108, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#orBreakSignup hr {
+  border: .5px solid #C8C7CC;
+  width: 135px;
+  height: 0px;
+}
+
+/* line 114, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#orBreakSignup p {
+  color: #9296A3;
+  font-family: 'Muli', sans-serif;
+  font-size: 11px;
+  margin-top: -2px;
+  display: inline-block;
+}
+
+/* line 122, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.birthdaySelect select, #countryDropdown {
+  margin-top: 12px;
+  appearance: none;
+  color: #9296A3;
+  font-size: 14px;
+  height: 42px;
+  border-radius: 0px;
+  border: solid 1px #D3D6DC;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding-left: 15px;
+}
+
+/* line 135, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#countryDropdown {
+  margin: 0;
+  width: 315px;
+  position: relative;
+  bottom: 32px;
+}
+
+/* line 142, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.selectArrow {
+  position: absolute;
+  color: #D3D6DC;
+  font-family: 'Lora', serif;
+  transform: rotate(-180deg);
+  pointer-events: none;
+}
+
+/* line 150, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#arrowDay {
+  bottom: 325px;
+  right: 275px;
+}
+
+/* line 155, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#arrowMonth {
+  bottom: 325px;
+  right: 145px;
+}
+
+/* line 160, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#arrowYear {
+  bottom: 325px;
+  right: 35px;
+}
+
+/* line 165, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#arrowCountry {
+  bottom: 200px;
+  right: 35px;
+}
+
+/* line 170, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.birthdaySelect select:nth-child(1) {
+  width: 80px;
+  margin-right: 14px;
+}
+
+/* line 175, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.birthdaySelect select:nth-child(3) {
+  width: 118px;
+  margin-right: 14px;
+}
+
+/* line 180, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.birthdaySelect select:nth-child(5) {
+  width: 92px;
+}
+
+/* line 184, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signup input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* line 188, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* line 192, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.genderRadio {
+  position: relative;
+}
+
+/* line 196, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.genderContainer {
+  display: flex;
+  margin: 24px 0;
+}
+
+/* line 201, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm input[type="radio"] {
+  display: none;
+}
+
+/* line 205, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm input[type="radio"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -2px 10px 0 0;
+  vertical-align: middle;
+  background-color: transparent;
+  width: 97px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* line 217, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.radioSpan {
+  border: solid #D3D6DC 1px;
+}
+
+/* line 221, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm input[type="radio"]:checked + label span {
+  background: url(ratIcon.png) -19px top no-repeat;
+}
+
+/* line 225, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm input[type="radio"]:checked + label + label {
+  color: #212528;
+}
+
+/* line 228, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm input[type="radio"]:checked + label + label #oDiv {
+  color: #1DDD7C;
+}
+
+/* line 233, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.genderRadio label:last-child {
+  position: relative;
+  bottom: 30px;
+  left: 15px;
+  color: #9296A3;
+  pointer-events: none;
+  font-family: 'Ariel', sans-serif;
+  font-size: 14px;
+}
+
+/* line 243, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+#oDiv {
+  position: relative;
+  left: 60px;
+  bottom: 13px;
+  color: #9296A3;
+}
+
+/* line 250, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+.signupForm p {
+  text-align: center;
+  font-family: 'Ariel', sans-serif;
+  font-size: 14px;
+  color: #9296A3;
+  line-height: 20px;
+}
+
+/* line 259, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/sessions.scss */
+extarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+  outline: 0 solid;
+}
+/* line 1, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+#backgroundSplash {
+  background-image: url(/assets/rats-730165c5f06d5542cda36bb19f13eaadd473e371226b90c9e3efcf37c71e8f1e.jpg);
+  width: 100%;
+  height: 700px;
+}
+
+/* line 8, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.contentSplash {
+  height: 420px;
+  width: 420px;
+  float: right;
+  margin: 50px 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: right;
+}
+
+/* line 19, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+#backgroundSplash h1 {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 4px;
+  color: white;
+  font-size: 46px;
+  margin: 20px 0;
+  text-align: right;
+}
+
+/* line 29, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.contentSplash hr {
+  color: white;
+  border-top: white 6px solid;
+  width: 90px;
+}
+
+/* line 35, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.contentSplash p {
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  margin: 20px 0 20px 120px;
+  line-height: 24px;
+  text-align: right;
+}
+
+/* line 44, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.signupSplashButton {
+  background-color: #1ddd7c;
+  border-radius: 2px;
+  width: 320px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px 0 10px 100px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  color: white;
+  border: none;
+}
+
+/* line 58, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.signupSplashButton:hover {
+  background-color: #21b66b;
+}
+
+/* line 63, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.contentSplash div {
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  align-items: center;
+  margin: 18px 0 18px 180px;
+}
+
+/* line 71, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.loginSplashButton {
+  border-radius: 2px;
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: lightgray solid 2px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+/* line 83, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.loginSplashButton:hover {
+  background-color: rgba(177, 177, 177, 0.46);
+}
+
+/* line 87, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+.contentSplash div span {
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  margin-right: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+/* line 95, /Users/jonathanahern/Desktop/mapMyRat/map_my_rat/app/assets/stylesheets/splash.scss */
+button:hover {
+  cursor: pointer;
+}
+#create-container {
+    height: 91%;
+    display:flex;
+    position: relative;
+}
+
+#create-sidebar{
+    padding: 10px;
+    padding-right: 5px;
+    border-right: solid #999999 1px;
+    min-width: 300px;
+    height: 100%;
+    background-color: #FEFEFE;
+    box-sizing: border-box;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+}
+
+#create-sidebar input[type="submit"] {
+    padding: 0;
+    border-radius: 3px;
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Ariel', sans-serif;
+    color: white;
+    border: none;
+    background-color: #B4B3B3;
+    box-shadow: #B4B3B3 0px 2px 5px;
+    margin: 5px;
+}
+
+#create-sidebar input{
+    background: white;
+    border-radius: 5px;
+    border: solid 1px #D3D6DC;
+    height: 10px;
+    /* margin: 12px 0; */
+    padding: 10px 0 10px 15px;
+    font-size: 14px;
+    width: 166px;
+}
+
+#route-input input {
+     width: 246px;
+     margin: 6px 0;
+}
+
+#route-input textarea {
+    margin: 6px 0;
+    background: white;
+    border-radius: 5px;
+    border: solid 1px #D3D6DC;
+    /* margin: 12px 0; */
+    padding: 10px 0 10px 15px;
+    font-size: 14px;
+    resize: none;
+}
+
+.loading {
+    background-color: rgb(228, 228, 228);
+    z-index: 5;
+}
+
+#loadScreen{
+    /* position: absolute;
+    background-color: #B4B3B3;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -100; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loadScreen h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62px;
+    color: salmon;
+    letter-spacing: 8px;
+}
+
+#loadScreen img{
+    transition-duration: 0.3s;
+    animation-direction: alternate;
+    transition: transform 1s ease-in-out;
+    width: 300px;
+    animation: bobble 1.5s;
+    animation-iteration-count: infinite;
+
+}
+
+#create-container h4 {
+    font-size: 16px;
+    color:#555555;
+    font-weight: 900;
+    font-family: 'Ariel', sans-serif;
+    margin: 15px 0;
+}
+
+#create-container hr{
+    border: solid .5px #D3D6DC;
+}
+
+.map-location{
+    margin-bottom: 20px;
+    border-bottom: 1 solid gray;
+}
+
+#create-sidebar #saveTourButton {
+    background-color: #FF9020;
+    width: 135px;
+}
+
+#create-sidebar span {
+    color: red;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.mapTools{
+    height: 235px;
+    width: 170px;
+    background-color: white;
+    z-index: 101;
+    position: absolute;
+    top: 125px;
+    left: 310px;
+    z-index: 99;
+    border-radius: 3px;
+    border: lightgrey 1px solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+}
+
+#distance-div{
+    background-color: rgb(97,97,98, .8);
+    height: 40px;
+    width: 170px;
+    position: absolute;
+    margin-bottom: 100px;
+    top:-40px;
+    padding: 4px;
+    box-sizing: border-box; 
+    border-radius: 4px 4px 0 0; 
+}
+#distance-div h2{
+    font-family: 'Open San', sans-serif;
+    font-size: 11px;
+    color: #E3E3E3;
+}
+
+#distance-div h3{
+    font-family: 'condensed Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: left;
+}
+
+
+.mapTools ul{
+    /* background-color: red; */
+    padding: 7px 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rodentIcons{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    background-color: #D3D6DC;
+    border-radius: 5px;
+    margin: 4px;
+    transition: all .2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+}
+
+.rodentIcons:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.selectedIcon{
+    background-color: rgb(132, 211, 238);
+}
+
+.mapTools h3 {
+    text-align: center;
+    margin:0;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.mapTools h5 {
+    text-align: center;
+    margin-top: 3px;
+    font-size: 9px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.toolButtonHolder button{
+    background-color: #D3D6DC;
+    border-radius: 4px;
+    width: 66px;
+    height: 38px;
+    display: inline-block;
+    font-size: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    border: none;
+    margin: 4px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all .2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+}
+
+.toolButtonHolder button:hover {
+    transform: scale(1.1);
+}
+
+.toolButtonHolder button img {
+    width:15px;
+    height: 15px;
+    padding: 5px;
+}
+
+.toolButtonHolder {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dance {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+  background-color: yellow;
+  border: 5px solid yellow;
+}
+
+.danceTools {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+  background-color: yellow;
+}
+
+marquee{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    
+}
+
+marquee img{
+    height: 220px
+}
+
+.show {
+    opacity: 1.0;
+}
+
+
+@keyframes shake {
+  0% { background-color: red; border-color: red;}
+  10% { color: red; }
+  20% { background-color: purple; border-color: purple;}
+  30% { color: purple;}
+  40% { background-color: yellowgreen; border-color: yellowgreen;}
+  50% { color: yellowgreen;}
+  60% { background-color: yellow; border-color: yellow;}
+  70% { color: yellow;}
+  80% { background-color: orange; border-color: orange;}
+  90% {  color: orange;}
+  100% { background-color: blue; border-color: blue;}
+}
+
+@keyframes bobble {
+  0% { transform: translateY(2px); transform: rotate(-2deg); }
+
+  30% { transform: translateX(2px); transform: rotate(2deg); }
+
+  60% { transform: translateY(-2px); transform: rotate(-2deg); }
+
+  100% { transform: translateX(-2px); transform: rotate(2deg); }
+
+}
+.tours-container{
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.tours-container li:first-child {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 18px 0;
+}
+
+.tour-index-container {
+    position:relative;
+    margin-left: 64px;
+    width: 550px;
+    min-height: 260px;
+    border: solid .5px rgb(205,205,205);
+    margin-top: 36px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #e0e0e0 2px 2px 0;
+}
+
+.tour-index-container #profile-pic {
+    position: absolute;
+    left: -70px;
+    height: 55px;
+    width: 55px;
+    border-right: solid .25px rgb(205,205,205);
+    box-shadow: #e0e0e0 2px 2px 0;
+}
+
+#tour-intro-container{
+    min-height: 60px;
+    padding: 18px 0 10px 18px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    /* flex-grow: 1; */
+}
+
+#tour-intro-container p{
+    margin-top: 12px;
+    font-size: 14px;
+    margin-right: 20px;
+    /* background-color: seagreen; */
+    overflow: hidden;
+}
+
+#tour-intro-container h3{
+    color: #28201B;
+}
+
+#tour-intro-container span{
+    font-weight: 800;
+    color: black;
+}
+
+#tour-details-container{
+    background-color: #F8F8F8;
+    min-height:180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tour-details-container div{
+    flex-basis: 80px;
+    flex-grow: 1;
+    border: .5px solid rgb(205,205,205);
+}
+
+#tour-details-container div {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tour-details-container section {
+    font-family: 'Ariel', sans-serif;
+    font-weight: 100;
+    color: #666666
+}
+
+#distance .distance-stats {
+    margin: auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #666666;
+}
+
+#distance h4 {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.distance-stats span{
+    font-family: 'Ariel', sans-serif;
+    font-weight: 100;
+    color: #666666;
+    font-size: 12px;
+}
+
+#tour-details-container div:last-child {
+    display: block;
+    /* background-color: blue; */
+}
+
+#tour-details-container #map-image {
+    overflow: hidden;
+    display: flex;
+}
+
+#map-image-file{
+    height: 178px;
+    margin: 0 auto;
+}
+
+.distance-stats{
+    font-family: "Roboto", sans-serif;
+}
+
+.rodent-stats{
+    margin: auto;
+    margin-top: 6px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #666666;
+}
+
+#rodent-count #rodent-holder {
+    margin-top: 20px;
+    border: none;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.rodentPic {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 3px;
+}
+
+.buttonClick:active, .toolButtonHolder button:active, .rodentIcons:active {
+  transform: translateY(1px);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

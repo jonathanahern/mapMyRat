@@ -4,9 +4,9 @@ import { Route } from "react-router-dom";
 import LoginFormContainer from "../components/session/login_form_container";
 import SignupFormContainer from "../components/session/signup_form_container";
 import Splash from "../components/splash/splash"
-import RodentIndexContainer from "../components/rodents/rodent_index_container"
 import TourContainer from "../components/tour/tour_container"
 import TourIndexContainer from "../components/tour_index/tour_index_container"
+import Footer from "./footer"
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -21,6 +21,7 @@ const App = () => (
     <ProtectedRoute exact path="/tours/create" component={TourContainer} />
     <ProtectedRoute exact path="/tours" component={TourIndexContainer} />
     <AuthRoute exact path="/" component={Splash} />
+    
   </>
 );
 

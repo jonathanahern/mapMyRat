@@ -1,0 +1,38 @@
+#footer-container{
+    width: 100%;
+    height: 100px;
+    background-color: #1F2326;
+    color: white;
+    padding:4px;
+}
+
+#footer-container div:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 100px;
+}
+
+#footer-container div:first-child div{
+    width: 120px;
+}
+
+#rat-footer{
+    position: relative;
+    top: -70px;
+    height: 170px;
+}
+
+#footer-container h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+#footer-container li {
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 4px 0;
+
+}

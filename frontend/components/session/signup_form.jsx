@@ -76,7 +76,7 @@ class SignupForm extends React.Component {
 
     return (
       <div className="signupModule">
-        {this.renderErrors()}
+        <p className="error">{this.renderErrors()}</p>
         <form onSubmit={this.handleSubmit}>
           <ul className="signupForm">
             <li>
@@ -216,6 +216,7 @@ class SignupForm extends React.Component {
           </ul>
         </form>
       </div>
+      
     );
   }
 }

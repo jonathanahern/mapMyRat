@@ -53,6 +53,7 @@ class TourMap extends React.Component {
     }
 
     componentDidMount() {
+        // document.getElementById("footer-container").className="hidden";
         this.getLocation();
         this.selectedIconElement = document.getElementById("selectedIcon");
         this.directionsDisplay = new google.maps.DirectionsRenderer({ suppressMarkers: true, preserveViewport: true });

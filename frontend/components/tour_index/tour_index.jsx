@@ -1,5 +1,6 @@
 import React from "react"
 import TourIndexItem from "./tour_index_item"
+import Footer from "../footer"
 
 class TourIndex extends React.Component {
     componentDidMount() {
@@ -23,7 +24,7 @@ class TourIndex extends React.Component {
     render(){
         let tourArr;
         if (this.props.tours.length > 0) {
-            tourArr = this.props.tours.map(tour => (<TourIndexItem tour={tour} users={this.props.users} key={tour.id} />))
+            tourArr = this.props.tours.map( (tour,index) => (<TourIndexItem tour={tour} count={index} users={this.props.users} key={tour.id} />))
         } else {
             tourArr = [];
         }
@@ -35,6 +36,7 @@ class TourIndex extends React.Component {
                         tourArr
                     }
                 </ul>
+                <Footer />
             </>
         )
     }

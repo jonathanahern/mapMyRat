@@ -1,6 +1,7 @@
 .tours-container{
     width: 75%;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 .tours-container li:first-child {
     font-family: 'Open Sans', sans-serif;
@@ -43,6 +44,9 @@
 #tour-intro-container p{
     margin-top: 12px;
     font-size: 14px;
+    margin-right: 20px;
+    /* background-color: seagreen; */
+    overflow: hidden;
 }
 
 #tour-intro-container h3{

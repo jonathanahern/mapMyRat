@@ -56,13 +56,12 @@ body, #root, html{
 }
 
 .show {
-	display: inherit;
+	display: block;
 }
 
 .error {
 	font-family: 'Ariel', sans-serif;
 	color: red;
-	font-style: italic;
 	font-size: 12px;
 	margin-left: 4px;
 }

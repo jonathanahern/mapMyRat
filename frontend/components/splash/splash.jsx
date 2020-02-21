@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Footer from "../footer"
 
 
 class Splash extends React.Component {
@@ -24,7 +25,7 @@ class Splash extends React.Component {
                         </div>
                     </div>
                 </div>
-                
+                <Footer />
             </>
         )
     }

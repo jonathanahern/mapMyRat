@@ -23,10 +23,10 @@ u1 = User.create!(
 
 t1 = Tour.create!(
     user_id: u1.id,
-    name: 'Park Slope Tour',
-    distance: 1.3,
-    description: "so fun",
-    map_img_url: "https://drzetlglcbfx.cloudfront.net/routes/thumbnail/2889986923/1581209600?&size=274x156"
+    name: 'Sewer Tour',
+    distance: 5.3,
+    description: "I will gather all the rodents for my mutant fighting crew",
+    map_img_url: ""
 )
 
 r1 = Rodent.create!(
@@ -41,7 +41,7 @@ r2 = Rodent.create!(
     tour_id: t1.id,
     lat: 40.669207,
     lng: 73.986288,
-    species: 'rat',
+    species: 'other',
     ord: 1
 )
 
@@ -66,8 +66,8 @@ u2 = User.create!(
 
 t2 = Tour.create!(
     user_id: u2.id,
-    name: 'Party in Staten!',
-    distance: 3.3,
+    name: 'Woohoo Tour',
+    distance: 1.3,
     description: "It's every one's birthday!!!",
     map_img_url: "https://www.silive.com/resizer/IkvWNU-tE8e0NAgL7xlIWvJhGl0=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.silive.com/home/silive-media/width600/img/latest_news/photo/screen-shot-2017-10-07-at-110726-ampng-013ec1ddbc5c0b18.png"
 
@@ -96,3 +96,143 @@ r6 = Rodent.create!(
     species: 'squirrel',
     ord: 2
 )
+
+r16 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'raccoon',
+    ord: 0
+)
+
+r15 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'rat',
+    ord: 1
+)
+
+r14 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'squirrel',
+    ord: 2
+)
+
+r19 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'other',
+    ord: 3
+)
+
+r18 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'rabbit',
+    ord: 4
+)
+
+r17 = Rodent.create!(
+    tour_id: t2.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'other',
+    ord: 5
+)
+
+u3 = User.create!(
+    first_name: "Pizza",
+    last_name: "Rat",
+    email: "pizza@email.com",
+    password: "password",
+    img_url: "https://i.ytimg.com/vi/0BfxLjx34Vk/hqdefault.jpg",
+    gender: "M",
+    birthday: Date.new(2016, 5, 17),
+    country: "United States"
+)
+
+t3 = Tour.create!(
+    user_id: u3.id,
+    name: 'Pizza Posse',
+    distance: 2.7,
+    description: "PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA",
+    map_img_url: ""
+)
+
+r5 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'rat',
+    ord: 0
+)
+
+r6 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'rat',
+    ord: 1
+)
+
+r7 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'rat',
+    ord: 2
+)
+
+r8 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'rat',
+    ord: 3
+)
+
+r9 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'rat',
+    ord: 4
+)
+
+r10 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'rat',
+    ord: 5
+)
+
+r11 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.676138,
+    lng: 73.978784,
+    species: 'rat',
+    ord: 6
+)
+
+r12 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.669207,
+    lng: 73.986288,
+    species: 'rat',
+    ord: 7
+)
+
+r13 = Rodent.create!(
+    tour_id: t3.id,
+    lat: 40.672695,
+    lng: 73.970614,
+    species: 'rat',
+    ord: 8
+)
+

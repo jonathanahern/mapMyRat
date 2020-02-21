@@ -1,11 +1,26 @@
 import React from 'react';
 
 const TourIndexItem = props => {
-   
+    let profileImg;
+    if (props.users[props.tour.user_id].img_url !== null) {
+        profileImg = <img id="profile-pic" src={props.users[props.tour.user_id].img_url} alt="" />
+    } else {
+        profileImg = < img id="profile-pic" src={window.userIconURL} />
+    }
+
+    let mapsArr = [
+        <img id="map-image-file" src={window.map1URL} alt="" />,
+        <img id="map-image-file" src={window.map2URL} alt="" />,
+        <img id="map-image-file" src={window.map3URL} alt="" />,
+        <img id="map-image-file" src={window.map4URL} alt="" />,
+        <img id="map-image-file" src={window.map5URL} alt="" />
+    ]
+    let mapImg = mapsArr[props.count % 5];
+
     return (
         <>
             <li className="tour-index-container">
-                <img src={props.users[props.tour.user_id].img_url} id="profile-pic" alt=""/>
+                {profileImg}
                 <div id="tour-intro-container">
                     <h3><span>{props.users[props.tour.user_id].first_name} {props.users[props.tour.user_id].last_name}</span> created the tour <span>{props.tour.name}</span></h3>
                     <p>{props.tour.description}</p>
@@ -45,7 +60,7 @@ const TourIndexItem = props => {
                         </section>
                     </div>
                     <div id="map-image">
-                         <img id="map-image-file" src={props.tour.map_img_url} alt="" />
+                        {mapImg}
                     </div>
                 </div>
             </li>

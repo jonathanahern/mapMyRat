@@ -14,6 +14,17 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger;
+    if (this.state.password.length < 1 ){
+      document.getElementById("password-field").className = "error show"
+    }
+    if (this.state.email.length < 1) {
+      document.getElementById("email-field").className = "error show"
+    }
+    if (this.state.password.length < 1 || this.state.email.length < 1){
+      return null;
+    }
+
     const user = Object.assign({}, this.state);
     this.props.passItThrough(user);
   }
@@ -44,7 +55,6 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="loginModule">
-        {this.renderErrors()}
         <form className="loginForm" onSubmit={this.handleSubmit}>
           <Link className="signUpLink" to="/signup">SIGN UP</Link>
           <input type="submit" onClick={this.handleDemoUser} value="LOG IN AS DEMO USER" />
@@ -53,6 +63,7 @@ class SessionForm extends React.Component {
             <p>OR</p>
             <hr/>
           </div>
+          <p className="error">{this.renderErrors()}</p>
           <input
             type="text"
             value={this.state.email}
@@ -61,6 +72,7 @@ class SessionForm extends React.Component {
             placeholder="Email"
           />
           <br/>
+          <p id="email-field" className="error hidden">Email is required</p>
           <input
             type="password"
             value={this.state.password}
@@ -69,9 +81,11 @@ class SessionForm extends React.Component {
             placeholder="Password"
           />
           <br/>
+          <p id="password-field" className="error hidden">Password is required</p>
           <input type="submit" value="LOG IN" />
         </form>
       </div>
+      
     );
   }
 }
